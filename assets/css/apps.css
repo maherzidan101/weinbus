@@ -1,0 +1,110 @@
+/* ============================================================================
+   WeinBus — App internals (parent / chaperone / admin shells) + map styling
+   ========================================================================== */
+
+/* ---- Map -------------------------------------------------------------- */
+.wb-map { width: 100%; height: 100%; display: block; }
+.map-card { position: relative; border-radius: var(--r-lg); overflow: hidden; background: #E8F1F8; }
+.wb-dot { fill: var(--brand-secondary-deep); }
+.wb-stop.passed .wb-dot { fill: #fff !important; }
+.wb-stop.passed .wb-dot-ring { fill: var(--brand-secondary-deep) !important; }
+.wb-stop.next .wb-dot { transform-box: fill-box; transform-origin: center; animation: dotPulse 1.3s var(--ease) infinite; }
+@keyframes dotPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.55); } }
+.wb-accuracy { transform-box: fill-box; transform-origin: center; animation: busPulse 2.1s ease-out infinite; }
+@keyframes busPulse { 0% { transform: scale(.6); opacity:.3 } 70% { transform: scale(1.6); opacity:0 } 100% { opacity:0 } }
+.wb-busbadge { transform-box: fill-box; transform-origin: center; animation: bobble 3s ease-in-out infinite; }
+.map-overlay { position: absolute; inset-inline: 12px; inset-block-end: 12px; display: flex; gap: 10px; align-items: center; justify-content: center; }
+.toast-wrap { inset-block-start: 34px; }
+.map-pill { background: rgba(255,255,255,.94); backdrop-filter: blur(8px); border-radius: var(--r-pill);
+  padding: 8px 14px; box-shadow: var(--sh-md); display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: var(--fs-sm); }
+.map-top { position: absolute; inset-block-start: 12px; inset-inline: 12px; display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+
+/* ---- App header (brand gradient, rounded bottom) ---------------------- */
+.app-head { background: var(--brand-gradient); color: var(--brand-on-primary); padding: 10px 18px 20px;
+  border-radius: 0 0 30px 30px; position: relative; overflow: hidden; }
+.app-head::after { content: ""; position: absolute; inset-block-start: -40px; inset-inline-end: -30px; width: 150px; height: 150px;
+  border-radius: 50%; background: rgba(255,255,255,.14); }
+.app-head h1, .app-head h2 { color: var(--brand-on-primary); }
+.app-head .muted, .app-head .dim { color: color-mix(in srgb, var(--brand-on-primary) 78%, transparent); }
+.greet { font-family: var(--font-display); font-weight: var(--fw-x); font-size: var(--fs-xl); }
+
+/* ---- ETA / live trip -------------------------------------------------- */
+.eta-num { font-family: var(--font-display); font-weight: var(--fw-x); font-size: 2.4rem; line-height: 1; }
+.kpi-mini { display: flex; flex-direction: column; gap: 2px; }
+.kpi-mini b { font-family: var(--font-display); font-size: var(--fs-lg); }
+
+/* ---- Child status chips/cards ---------------------------------------- */
+.kidchips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.kidchip { display: flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border-radius: var(--r-pill);
+  background: var(--surface); border: 1.5px solid var(--line); white-space: nowrap; transition: all var(--t-fast); cursor: pointer; }
+.kidchip.active { border-color: var(--brand-primary); background: var(--brand-primary-soft); }
+.kidcard { display: flex; align-items: center; gap: 12px; }
+
+/* ---- Vertical stop timeline ------------------------------------------ */
+.timeline { position: relative; padding-inline-start: 6px; }
+.tl-row { display: flex; gap: 14px; align-items: flex-start; padding: 6px 0; position: relative; }
+.tl-node { width: 28px; display: flex; flex-direction: column; align-items: center; flex: none; position: relative; }
+.tl-dot { width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 3px solid var(--line); z-index: 2; transition: all .3s; }
+.tl-line { position: absolute; inset-block-start: 16px; inset-block-end: -6px; width: 3px; background: var(--line); }
+.tl-row:last-child .tl-line { display: none; }
+.tl-row.done .tl-dot { background: var(--wb-green); border-color: var(--wb-green); }
+.tl-row.done .tl-line { background: var(--wb-green); }
+.tl-row.current .tl-dot { border-color: var(--brand-secondary-deep); box-shadow: 0 0 0 5px var(--brand-primary-soft); animation: dotPulse 1.4s infinite; transform-origin: center; }
+.tl-body { flex: 1; padding-bottom: 4px; }
+.tl-name { font-weight: 800; font-size: var(--fs-sm); }
+
+/* ---- Notification feed row ------------------------------------------- */
+.notif-row { display: flex; gap: 12px; padding: 12px; border-radius: var(--r-md); transition: background var(--t-fast); position: relative; }
+.notif-row:hover { background: var(--surface-2); }
+.notif-ic { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; font-size: 21px; flex: none; }
+.notif-row.unread::after { content: ""; position: absolute; inset-inline-end: 10px; inset-block-start: 16px; width: 8px; height: 8px; border-radius: 50%; background: var(--brand-secondary-deep); }
+.notif-new { animation: popIn .45s var(--ease-bounce); }
+
+/* ---- Chaperone roster ------------------------------------------------- */
+.roster-row { display: flex; align-items: center; gap: 12px; padding: 10px 8px; }
+.check-btn { width: 46px; height: 46px; border-radius: 50%; border: 2.5px solid var(--line); display: grid; place-items: center;
+  color: var(--ink-3); transition: all var(--t-fast) var(--ease-bounce); flex: none; background: var(--surface); }
+.check-btn.on { background: var(--wb-green); border-color: var(--wb-green); color: #fff; transform: scale(1.04); }
+.check-btn:active { transform: scale(.92); }
+.big-action { width: 100%; padding: 18px; border-radius: var(--r-xl); font-family: var(--font-display); font-weight: var(--fw-x);
+  font-size: var(--fs-xl); display: flex; align-items: center; justify-content: center; gap: 12px; color: #fff; box-shadow: var(--sh-lg); transition: transform var(--t-fast) var(--ease-bounce); }
+.big-action:active { transform: scale(.98); }
+.big-action--go { background: linear-gradient(135deg,#3DDC91,#10B981); box-shadow: 0 16px 32px rgba(16,185,129,.4); }
+.big-action--stop { background: linear-gradient(135deg,#FF8585,#EF4444); box-shadow: 0 16px 32px rgba(239,68,68,.35); }
+
+/* ---- Admin shell ------------------------------------------------------ */
+.admin { display: grid; grid-template-columns: 248px 1fr; min-height: 100%; background: var(--bg); }
+.admin-side { background: var(--surface); border-inline-end: 1px solid var(--line); padding: 18px 14px; display: flex; flex-direction: column; gap: 4px; position: sticky; top: 0; height: 100vh; }
+.admin-main { padding: 22px clamp(16px,2.5vw,30px) 50px; overflow-x: hidden; }
+.nav-link { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: var(--r-md); font-weight: 700; color: var(--ink-2); cursor: pointer; transition: all var(--t-fast); }
+.nav-link:hover { background: var(--surface-2); }
+.nav-link.active { background: var(--brand-primary-soft); color: var(--brand-primary-deep); }
+.nav-link svg { flex: none; }
+.admin-grid { display: grid; gap: 16px; }
+.cols-4 { grid-template-columns: repeat(4,1fr); }
+.cols-3 { grid-template-columns: repeat(3,1fr); }
+.cols-2 { grid-template-columns: repeat(2,1fr); }
+@media (max-width: 1000px){ .cols-4{ grid-template-columns: repeat(2,1fr) } .cols-3{ grid-template-columns: 1fr } .cols-2{grid-template-columns:1fr} .admin{ grid-template-columns: 1fr } .admin-side{ display:none } .dash-2{ grid-template-columns: 1fr !important } }
+@media (max-width: 560px){ .cols-4{ grid-template-columns: 1fr 1fr } }
+.data-table { width: 100%; border-collapse: collapse; }
+.data-table th { text-align: start; font-size: var(--fs-2xs); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.data-table td { padding: 12px; border-bottom: 1px solid var(--line-soft); font-weight: 600; font-size: var(--fs-sm); }
+.data-table tr:hover td { background: var(--surface-2); }
+.mini-map { height: 230px; border-radius: var(--r-md); overflow: hidden; }
+
+/* brand swatch chooser */
+.brand-card { cursor: pointer; border: 2.5px solid var(--line); border-radius: var(--r-lg); padding: 14px; transition: all var(--t-fast); display: flex; gap: 12px; align-items: center; background: var(--surface); }
+.brand-card.active { border-color: var(--brand-primary); box-shadow: 0 0 0 4px var(--brand-primary-soft); }
+.swatch { width: 22px; height: 22px; border-radius: 7px; }
+
+/* ---- Standalone phone column (overrides the absolute shell) ---------- */
+.app { position: relative; width: 100%; max-width: 440px; height: 100vh; margin-inline: auto;
+  inset: auto; display: flex; flex-direction: column; background: var(--bg); overflow: hidden; }
+@media (min-width: 600px) {
+  .app { height: min(884px, 96vh); border-radius: 38px; box-shadow: var(--sh-xl); border: 1px solid var(--line); }
+}
+.app > .view { position: absolute; inset-block-start: 30px; inset-block-end: 76px; inset-inline: 0; overflow-y: auto; overflow-x: hidden; }
+.app > .view::-webkit-scrollbar { width: 0; }
+.tab-badge { position: absolute; inset-block-start: 9px; inset-inline-start: calc(50% + 7px);
+  min-width: 17px; height: 17px; padding: 0 4px; border-radius: 99px; background: var(--wb-coral-deep);
+  color: #fff; font-size: 10px; font-weight: 800; display: grid; place-items: center; box-shadow: 0 0 0 2px #fff; }

@@ -1,0 +1,121 @@
+/* ============================================================================
+   WeinBus — Design Tokens
+   The single source of truth for color, type, space, radius, shadow & motion.
+   White-label brand vars (--brand-*) are overridden per school by brand.js.
+   ========================================================================== */
+
+:root {
+  /* ---- WeinBus core palette (default brand) ---------------------------- */
+  --wb-yellow:      #FFC727;   /* school-bus sunshine */
+  --wb-yellow-deep: #F5A623;
+  --wb-yellow-soft: #FFF1C2;
+  --wb-blue:        #29B6F6;   /* friendly sky */
+  --wb-blue-deep:   #1E88E5;
+  --wb-blue-soft:   #DBF1FE;
+  --wb-green:       #34D399;   /* go / checked-in */
+  --wb-green-deep:  #10B981;
+  --wb-green-soft:  #D6F7E9;
+  --wb-coral:       #FF6B6B;   /* alert / stop */
+  --wb-coral-deep:  #EF4444;
+  --wb-coral-soft:  #FFE0E0;
+  --wb-purple:      #8B7CF6;   /* playful accent */
+  --wb-purple-soft: #E9E5FF;
+  --wb-amber:       #FB923C;   /* warning / late */
+  --wb-amber-soft:  #FFE8D4;
+
+  /* ---- Ink & neutrals (warm, never pure black) ------------------------ */
+  --ink:        #20304A;       /* primary text — deep friendly navy */
+  --ink-2:      #4A5A72;       /* secondary text */
+  --ink-3:      #7C8AA0;       /* muted text */
+  --line:       #E9EBF1;       /* hairline borders */
+  --line-soft:  #F1F3F8;
+  --surface:    #FFFFFF;       /* cards */
+  --surface-2:  #FBFCFE;       /* raised alt */
+  --bg:         #F4F7FC;       /* app background */
+  --bg-warm:    #FFFBF3;       /* landing background */
+
+  /* ---- White-label brand hooks (school.js overrides these) ------------ */
+  --brand-primary:      var(--wb-yellow);
+  --brand-primary-deep: var(--wb-yellow-deep);
+  --brand-primary-soft: var(--wb-yellow-soft);
+  --brand-secondary:    var(--wb-blue);
+  --brand-secondary-deep:var(--wb-blue-deep);
+  --brand-accent:       var(--wb-purple);
+  --brand-ink:          var(--ink);
+  --brand-on-primary:   #20304A;     /* text that sits on the primary color */
+  --brand-gradient: linear-gradient(135deg, var(--wb-yellow) 0%, var(--wb-yellow-deep) 100%);
+  --brand-sky: linear-gradient(180deg, #BDE8FF 0%, #E9F7FF 60%, #FFFBF3 100%);
+
+  /* ---- Semantic ------------------------------------------------------- */
+  --ok:    var(--wb-green-deep);
+  --warn:  var(--wb-amber);
+  --danger:var(--wb-coral-deep);
+  --info:  var(--wb-blue-deep);
+  --live:  var(--wb-green);
+
+  /* ---- Typography ----------------------------------------------------- */
+  /* Per-glyph fallback keeps Latin digits in the Latin font (numbers stay
+     English) while Arabic letters render in the Arabic font automatically. */
+  --font-display: "Baloo 2", "Baloo Bhaijaan 2", system-ui, sans-serif;
+  --font-body:    "Nunito", "Cairo", system-ui, -apple-system, sans-serif;
+
+  --fs-3xs: 0.6875rem;  /* 11 */
+  --fs-2xs: 0.75rem;    /* 12 */
+  --fs-xs:  0.8125rem;  /* 13 */
+  --fs-sm:  0.9375rem;  /* 15 */
+  --fs-md:  1rem;       /* 16 */
+  --fs-lg:  1.125rem;   /* 18 */
+  --fs-xl:  1.375rem;   /* 22 */
+  --fs-2xl: 1.75rem;    /* 28 */
+  --fs-3xl: clamp(2rem, 1.4rem + 2.6vw, 3rem);
+  --fs-4xl: clamp(2.6rem, 1.6rem + 4.2vw, 4.4rem);
+  --fw-reg: 500;
+  --fw-med: 600;
+  --fw-bold:700;
+  --fw-x:   800;
+  --lh-tight: 1.12;
+  --lh-snug:  1.3;
+  --lh-body:  1.6;
+
+  /* ---- Spacing (4px base) -------------------------------------------- */
+  --s1: 4px;  --s2: 8px;  --s3: 12px; --s4: 16px; --s5: 20px;
+  --s6: 24px; --s7: 32px; --s8: 40px; --s9: 56px; --s10: 72px; --s12: 96px;
+
+  /* ---- Radius (generous = friendly) ---------------------------------- */
+  --r-xs: 8px;  --r-sm: 12px; --r-md: 18px; --r-lg: 24px;
+  --r-xl: 32px; --r-2xl: 44px; --r-pill: 999px;
+
+  /* ---- Shadows (soft, layered, warm) --------------------------------- */
+  --sh-xs: 0 1px 2px rgba(32,48,74,.06);
+  --sh-sm: 0 2px 8px rgba(32,48,74,.07);
+  --sh-md: 0 8px 22px rgba(32,48,74,.09);
+  --sh-lg: 0 18px 44px rgba(32,48,74,.13);
+  --sh-xl: 0 30px 70px rgba(32,48,74,.18);
+  --sh-pop: 0 14px 30px rgba(245,166,35,.30);
+  --sh-inset: inset 0 2px 4px rgba(32,48,74,.06);
+
+  /* ---- Motion --------------------------------------------------------- */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-bounce: cubic-bezier(.34, 1.56, .64, 1);
+  --t-fast: .16s;
+  --t-med:  .28s;
+  --t-slow: .5s;
+
+  /* ---- Layout --------------------------------------------------------- */
+  --maxw: 1180px;
+  --nav-h: 72px;
+  --phone-w: 390px;
+  --phone-h: 800px;
+  --z-nav: 50; --z-sticky: 60; --z-overlay: 80; --z-toast: 90; --z-modal: 100;
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

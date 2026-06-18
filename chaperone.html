@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WeinBus · Chaperone</title>
+<meta name="theme-color" content="#FFC727">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>(function(){var l=localStorage.getItem('wb_lang')||'en';var b=localStorage.getItem('wb_brand')||'weinbus';var h=document.documentElement;h.lang=l;h.dir=l==='ar'?'rtl':'ltr';h.setAttribute('data-brand',b);})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@500;600;700;800&family=Cairo:wght@500;600;700;800&family=Baloo+Bhaijaan+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/apps.css">
+<style>
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: var(--bg); }
+  @media (min-width: 600px){ body { background: radial-gradient(120% 90% at 50% 0%, #EAF4FF 0%, #F4F7FC 55%, #FFF7EC 100%); } }
+</style>
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="statusbar">
+      <span id="clock" class="num">7:13</span>
+      <span class="row gap1" aria-hidden="true">
+        <svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
+        <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><path d="M8 2.2c2 0 3.8.8 5.1 2.1l1.3-1.3A9 9 0 0 0 8 .4 9 9 0 0 0 1.6 3l1.3 1.3A7.2 7.2 0 0 1 8 2.2zM8 5.6c1.1 0 2.1.4 2.8 1.2l1.3-1.3A5.6 5.6 0 0 0 8 3.8a5.6 5.6 0 0 0-4.1 1.7l1.3 1.3A3.9 3.9 0 0 1 8 5.6zm0 3.3 1.8-1.8a2.5 2.5 0 0 0-3.6 0z"/></svg>
+        <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="1" y="1" width="21" height="10" rx="3" stroke="currentColor" stroke-width="1.2" opacity=".5"/><rect x="2.5" y="2.5" width="16" height="7" rx="1.6" fill="currentColor"/><rect x="23" y="4" width="1.5" height="4" rx="1" fill="currentColor" opacity=".5"/></svg>
+      </span>
+    </div>
+
+    <div id="view-trip" class="view active"></div>
+    <div id="view-students" class="view"></div>
+    <div id="view-more" class="view"></div>
+
+    <nav class="tabbar" id="tabbar"></nav>
+  </div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/brand.js"></script>
+  <script src="assets/js/trip-sim.js"></script>
+  <script src="assets/js/map.js"></script>
+  <script src="assets/js/chaperone.js"></script>
+</body>
+</html>

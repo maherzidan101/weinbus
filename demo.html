@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeinBus · Live Demo</title>
+<meta name="theme-color" content="#FFC727">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>(function(){var l=localStorage.getItem('wb_lang')||'en';var b=localStorage.getItem('wb_brand')||'weinbus';var h=document.documentElement;h.lang=l;h.dir=l==='ar'?'rtl':'ltr';h.setAttribute('data-brand',b);})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@500;600;700;800&family=Cairo:wght@500;600;700;800&family=Baloo+Bhaijaan+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/apps.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<style> body { background: linear-gradient(180deg,#EAF4FF 0%, #FFFBF3 360px, #F4F7FC 100%); min-height: 100vh; } </style>
+</head>
+<body>
+  <div class="democ-bar"><div class="democ-in">
+    <a class="nav__logo" href="index.html" style="font-size:var(--fs-md)"><span data-brand-logo="32"></span><span data-brand-name>WeinBus</span></a>
+    <span class="badge badge--ok"><span class="live-dot"></span><span data-i18n="demo.live">Live demo</span></span>
+    <div class="grow"></div>
+    <span class="muted small hide-mobile" data-i18n="demo.brandLabel">School:</span>
+    <div class="row gap1" id="demo-brands"></div>
+    <div class="seg seg--sm"><button data-lang-opt="en">EN</button><button data-lang-opt="ar">ع</button></div>
+    <button class="btn btn--green btn--sm pulse-btn" id="demo-start"><span data-i18n="demo.start">Start trip</span></button>
+  </div></div>
+
+  <div class="cockpit">
+    <p class="demo-hint reveal" data-i18n-html="demo.hint">Tap <b>Start morning trip</b> and watch the bus move and alerts pop across all three apps — live and in sync.</p>
+    <div class="cockpit-row">
+      <div class="device">
+        <div class="device-label"><span class="em">🚌</span> <span data-i18n="demo.chaperone">Chaperone app</span>
+          <a class="btn btn--ghost btn--sm" href="chaperone.html" target="_blank" data-i18n-aria="demo.open" title="Open">↗</a></div>
+        <div class="phone phone--demo"><div class="phone__notch"></div><div class="phone__screen"><iframe src="chaperone.html" title="Chaperone app"></iframe></div></div>
+      </div>
+      <div class="device">
+        <div class="device-label"><span class="em">👨‍👩‍👧</span> <span data-i18n="demo.parent">Parent app</span>
+          <a class="btn btn--ghost btn--sm" href="parent.html" target="_blank" title="Open">↗</a></div>
+        <div class="phone phone--demo"><div class="phone__notch"></div><div class="phone__screen"><iframe src="parent.html" title="Parent app"></iframe></div></div>
+      </div>
+    </div>
+    <div class="cockpit-row">
+      <div class="device" style="width:min(1080px,100%)">
+        <div class="device-label"><span class="em">🏫</span> <span data-i18n="demo.school">School Console</span>
+          <a class="btn btn--ghost btn--sm" href="admin.html" target="_blank" title="Open">↗</a></div>
+        <div class="browser browser--demo">
+          <div class="browser__bar"><span class="browser__dots"><i style="background:#FF6B6B"></i><i style="background:#FFC727"></i><i style="background:#34D399"></i></span>
+            <span class="browser__url num" id="demo-url">al-manhal.weinbus.app</span></div>
+          <div class="browser__body"><iframe src="admin.html" title="School Console"></iframe></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/brand.js"></script>
+  <script src="assets/js/trip-sim.js"></script>
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>

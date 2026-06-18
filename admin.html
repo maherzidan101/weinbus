@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeinBus · School Console</title>
+<meta name="theme-color" content="#FFC727">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>(function(){var l=localStorage.getItem('wb_lang')||'en';var b=localStorage.getItem('wb_brand')||'weinbus';var h=document.documentElement;h.lang=l;h.dir=l==='ar'?'rtl':'ltr';h.setAttribute('data-brand',b);})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@500;600;700;800&family=Cairo:wght@500;600;700;800&family=Baloo+Bhaijaan+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/apps.css">
+</head>
+<body>
+  <div class="admin">
+    <aside class="admin-side">
+      <div class="row gap2" style="padding:6px 10px 16px">
+        <span data-brand-logo="40"></span>
+        <div style="line-height:1.1"><b data-brand-short style="font-size:var(--fs-md)">WeinBus</b><div class="muted tiny">School Console</div></div>
+      </div>
+      <nav id="nav" class="stack gap1 grow"></nav>
+      <div class="card card--pad" style="padding:12px">
+        <div class="row between" style="margin-bottom:10px">
+          <div class="seg seg--sm" id="side-lang">
+            <button data-l="en" class="active">EN</button><button data-l="ar">ع</button>
+          </div>
+          <span class="badge badge--brand"><span data-i18n="common.demo">Demo</span></span>
+        </div>
+        <div class="row gap2"><div class="avatar avatar--sm" style="background:#5849C4">LQ</div>
+          <div style="line-height:1.1"><b class="small" id="admin-user">Layla Qasem</b><div class="muted tiny" id="admin-role">Principal</div></div></div>
+      </div>
+    </aside>
+    <main class="admin-main" id="main"></main>
+  </div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/brand.js"></script>
+  <script src="assets/js/trip-sim.js"></script>
+  <script src="assets/js/map.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
