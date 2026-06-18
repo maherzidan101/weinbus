@@ -103,7 +103,7 @@
 @media (min-width: 600px) {
   .app { height: min(884px, 96vh); border-radius: 38px; box-shadow: var(--sh-xl); border: 1px solid var(--line); }
 }
-.app > .view { position: absolute; inset-block-start: 30px; inset-block-end: 76px; inset-inline: 0; overflow-y: auto; overflow-x: hidden; }
+.app > .view { position: absolute; inset-block-start: 30px; inset-block-end: 76px; inset-inline: 0; overflow-y: auto; overflow-x: hidden; padding-block-end: 12px; }
 .app > .view::-webkit-scrollbar { width: 0; }
 .tab-badge { position: absolute; inset-block-start: 9px; inset-inline-start: calc(50% + 7px);
   min-width: 17px; height: 17px; padding: 0 4px; border-radius: 99px; background: var(--wb-coral-deep);

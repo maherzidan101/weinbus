@@ -116,7 +116,7 @@
         <div class="kidchips" style="margin-top:14px">${chips}</div>
       </header>
       <div class="stack gap4" style="padding:14px 16px 0">
-        <div class="map-card" style="height:248px;box-shadow:var(--sh-md)">
+        <div class="map-card" style="height:220px;box-shadow:var(--sh-md)">
           <div id="pmap" style="position:absolute;inset:0"></div>
           <div class="map-top">
             <span class="map-pill"><span class="live-dot"></span><span class="num" id="m-live">${WB.t("common.live")}</span></span>

@@ -166,8 +166,8 @@ html[dir="rtl"] .phone__notch { transform: translateX(50%); }
 .appbar__title { font-family: var(--font-display); font-weight: var(--fw-x); font-size: var(--fs-lg); }
 .appbody { flex: 1; overflow-y: auto; overflow-x: hidden; padding: 4px 16px 90px; -webkit-overflow-scrolling: touch; }
 .appbody::-webkit-scrollbar { width: 0; }
-.tabbar { position: absolute; inset-block-end: 0; inset-inline: 0; height: 76px; background: rgba(255,255,255,.92);
-  backdrop-filter: blur(12px); border-top: 1px solid var(--line); display: flex; padding-bottom: 6px; z-index: 16; }
+.tabbar { position: absolute; inset-block-end: 0; inset-inline: 0; height: 76px; background: var(--surface);
+  border-top: 1px solid var(--line); box-shadow: 0 -4px 16px rgba(32,48,74,.06); display: flex; padding-bottom: 6px; z-index: 16; }
 .tabbar a { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
   font-size: 10.5px; font-weight: var(--fw-bold); color: var(--ink-3); transition: color var(--t-fast); position: relative; }
 .tabbar a svg { width: 24px; height: 24px; transition: transform var(--t-fast) var(--ease-bounce); }

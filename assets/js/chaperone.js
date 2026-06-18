@@ -83,7 +83,7 @@
       card = `<div class="card card--pad stack gap4">
         <div class="row between"><span class="live">${WB.t("c.inProgress")} <span class="live-dot"></span></span>
           <span class="badge badge--ok"><span class="num" id="c-ob">0</span>/${roster.length} ${WB.t("c.onboard")}</span></div>
-        <div class="map-card" style="height:178px"><div id="cmap" style="position:absolute;inset:0"></div></div>
+        <div class="map-card" style="height:158px"><div id="cmap" style="position:absolute;inset:0"></div></div>
         <div class="progress"><div class="progress__bar" id="c-bar"></div></div>
         <div class="row between center-text">
           <div class="kpi-mini"><span class="muted tiny">${WB.t("c.next")}</span><b class="small" id="c-next">—</b></div>
