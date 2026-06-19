@@ -59,23 +59,13 @@
       </div>
     </div></header>
 
-    <section class="section section--warm" style="padding-block:54px"><div class="container">
-      <div class="statstrip">
-        <div class="stat center-text"><div class="stat__num"><span data-count="100" data-suffix="%">0</span></div><div class="stat__label">${L("of every trip, logged", "من كل رحلة، موثّقة")}</div></div>
-        <div class="stat center-text"><div class="stat__num num">2</div><div class="stat__label">${L("taps to start a route", "نقرتان لبدء المسار")}</div></div>
-        <div class="stat center-text"><div class="stat__num" style="color:var(--wb-green-deep)">${L("Live", "مباشر")}</div><div class="stat__label">${L("GPS you can watch", "موقع يمكنك متابعته")}</div></div>
-        <div class="stat center-text"><div class="stat__num num">0</div><div class="stat__label">${L("guesswork at the gate", "تخمين عند البوابة")}</div></div>
-      </div>
-    </div></section>
-
     <section class="section" id="why"><div class="container center">
       <span class="eyebrow">${L("The morning problem", "مشكلة الصباح")}</span>
       <h2 class="h-sec">${L("Drop-off shouldn’t be a guessing game", "لا يجب أن يكون التوصيل لعبة تخمين")}</h2>
       <p class="sub-sec">${L("Without visibility, parents call the office, the gate gets crowded, and nobody really knows where the bus is right now.", "بدون رؤية واضحة، يتّصل الأهالي بالإدارة، وتزدحم البوابة، ولا أحد يعرف فعلاً أين الباص الآن.")}</p>
-      <div class="grid-3" style="margin-top:42px;text-align:start">
-        ${feature("var(--wb-coral-soft)", "var(--wb-coral-deep)", "phone", "Anxious parents", "أهالٍ قلقون", "“Is the bus here yet?” Asked every morning, answered by worry instead of facts.", "«هل وصل الباص؟» سؤال يتكرّر كل صباح، تجيب عنه الحيرة لا الحقائق.")}
-        ${feature("var(--wb-amber-soft)", "#C2410C", "broadcast", "Flooded phone lines", "خطوط هاتف مزدحمة", "One small delay turns into 300 WhatsApp messages and a jammed front office.", "تأخّر بسيط يتحوّل إلى 300 رسالة واتساب ومكتب استقبال مزدحم.")}
-        ${feature("var(--wb-purple-soft)", "#6D5BD0", "shield", "No accountability", "غياب المساءلة", "Paper rosters can’t tell you who rode which bus, or exactly when.", "كشوف الورق لا تخبرك من ركب أي باص، ولا متى بالضبط.")}
+      <div class="grid-2" style="margin-top:42px;text-align:start;max-width:760px;margin-inline:auto">
+        ${feature("var(--wb-coral-soft)", "var(--wb-coral-deep)", "clock", "Anxious parents", "أهالٍ قلقون", "“Is the bus here yet?” Asked every morning, answered by worry instead of facts.", "«هل وصل الباص؟» سؤال يتكرّر كل صباح، تجيب عنه الحيرة لا الحقائق.")}
+        ${feature("var(--wb-amber-soft)", "#C2410C", "phone", "Calling around for answers", "اتصالات بحثاً عن إجابة", "Parents end up calling the school, the chaperone, or whoever runs transport, just to find out where the bus is.", "ينتهي الأمر بالأهالي يتّصلون بالمدرسة أو المرافِقة أو المسؤول عن النقل، فقط ليعرفوا أين الباص.")}
       </div>
     </div></section>
 
@@ -144,17 +134,6 @@
             <div class="grow"><b>${pick(t.name)}</b><div class="muted small num">${sl}.weinbus.app</div></div>
             <div class="row gap1"><span class="swatch" style="background:${t.vars["--brand-primary"]}"></span><span class="swatch" style="background:${t.vars["--brand-secondary"]}"></span></div></div>`; }).join("")}
         </div>
-      </div>
-    </div></section>
-
-    <section class="section section--sky"><div class="container">
-      <div class="center"><span class="eyebrow">🇯🇴 ${L("Made for Jordan", "مصمّم للأردن")}</span>
-        <h2 class="h-sec">${L("Local by design, not translated later", "محلّي بالتصميم، لا مُترجَم لاحقاً")}</h2></div>
-      <div class="grid-2" style="margin-top:38px;gap:16px 40px;max-width:840px;margin-inline:auto">
-        ${checkItem("Arabic and English with full right-to-left layout", "عربي وإنجليزي مع تخطيط كامل من اليمين إلى اليسار")}
-        ${checkItem("Numbers always in Latin digits (0-9)", "الأرقام دائماً لاتينية (0-9)")}
-        ${checkItem("Separate driver and female chaperone roles", "أدوار منفصلة للسائق والمرافِقة")}
-        ${checkItem("AM/PM split shifts and Ramadan schedules", "فترات صباحية ومسائية ومواعيد رمضان")}
       </div>
     </div></section>
 
