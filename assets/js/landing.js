@@ -55,7 +55,7 @@
         <img class="main" src="assets/img/hero.png" alt="${L("Happy children boarding a WeinBus school bus", "أطفال سعداء يصعدون باص وين الباص")}">
         <div class="hero__float float-1"><div class="notif-ic" style="width:38px;height:38px;font-size:18px;background:var(--wb-green-soft)">✅</div><div><b class="small">${L("Lana boarded", "صعدت لانا")}</b><div class="muted tiny num">7:13 AM · ${L("Bus 7", "الباص 7")}</div></div></div>
         <div class="hero__float float-2"><span class="live-dot"></span><div><b class="small">${L("5 min away", "على بُعد 5 د")}</b><div class="muted tiny">${L("University Street", "شارع الجامعة")}</div></div></div>
-        <img class="hero__mascot" src="assets/img/mascot.png" alt="">
+        <img class="hero__mascot" src="assets/img/weinbus-icon.png" alt="">
       </div>
     </div></header>
 
@@ -138,7 +138,7 @@
     </div></section>
 
     <section class="section"><div class="container"><div class="cta-band reveal">
-      <img src="assets/img/mascot.png" alt="" style="width:84px;margin:0 auto 14px;filter:drop-shadow(0 10px 16px rgba(32,48,74,.2))">
+      <img src="assets/img/weinbus-icon.png" alt="" style="height:90px;width:auto;margin:0 auto 14px;filter:drop-shadow(0 10px 16px rgba(32,48,74,.2))">
       <h2>${L("Bring WeinBus to your school", "أحضِر وين الباص إلى مدرستك")}</h2>
       <p style="color:var(--brand-on-primary);opacity:.92;font-size:var(--fs-lg);max-width:52ch;margin:12px auto 0">${L("Give every parent peace of mind.", "امنح كل أب وأم راحة البال.")}</p>
       <div class="row gap3 center" style="margin-top:26px;flex-wrap:wrap">

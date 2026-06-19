@@ -1,23 +1,24 @@
-# STATE, WeinBus
+# STATE — WeinBus
 
 **Branch:** main
-**Last action:** Deployed to GitHub + GitHub Pages, LIVE at https://maherzidan101.github.io/weinbus/ (all 5 surfaces + css/js/img return 200).
-**Next step:** Wire weinbus.euro52.com, user is creating a Cloudflare API token (Zone DNS:Edit for euro52.com). Then: add CNAME weinbus→maherzidan101.github.io, set GH Pages custom domain + CNAME file, wait for TLS.
+**Last action:** Custom domain LIVE. Created Cloudflare CNAME `weinbus → maherzidan101.github.io` (DNS-only) on neuro52.com, added repo CNAME file, set GitHub Pages custom domain + HTTPS enforced (cert approved). Verified HTTP 200 over HTTPS via curl against the Pages IP.
+**Next step:** None blocking. User should REVOKE the Cloudflare token now (DNS record is in place). Optional future: wire real GPS/backend; Cloudflare-Pages migration if desired.
+
+## Live URLs
+- Custom domain: https://weinbus.neuro52.com  (built, https_enforced, cert approved)
+- Pages mirror: https://maherzidan101.github.io/weinbus/
 
 ## Status
-- ✅ Design system (tokens/base/components/apps/site), i18n engine, white-label brand engine
-- ✅ Trip simulation (time-derived position + BroadcastChannel cross-frame sync)
-- ✅ Self-contained illustrated SVG map with animated bus
-- ✅ Parent app, Chaperone app, School Console, verified in EN + AR
-- ✅ Demo cockpit (3 live iframes, one-tap Start syncs all)
-- ✅ Landing / pitch page (hero art, features, white-label, JOD pricing, footer)
-- ✅ Higgsfield art (hero, mascot, chaperone) downloaded to assets/img
-- ✅ GitHub repo + Pages deploy, LIVE https://maherzidan101.github.io/weinbus/
-- ⬜ Cloudflare subdomain weinbus.euro52.com (awaiting CF API token from user)
+- ✅ All 5 surfaces (landing, demo cockpit, parent, chaperone, admin) — bilingual AR/EN, RTL, white-label, live sim
+- ✅ Real WeinBus logo wired (nav lockup + mascot brand mark + mascot as the live map bus)
+- ✅ Landing trimmed per feedback (no pricing / stat strip / Jordan section; reworded problem cards; short CTA)
+- ✅ No dashes anywhere; phones/plates LTR-isolated; Cairo Arabic; back-to-site button
+- ✅ Asset cache-busting `?v=7` (bump on each change so browsers refresh)
+- ✅ Deployed: GitHub repo + Pages + Cloudflare custom domain (HTTPS)
 
-## Blockers / open
-- Cloudflare API token not present in env → custom subdomain pending user token.
+## Security note
+- CF token lives in `CLOUDFLARE TOKEN FOR NEURO52 FOR SCHOOL BUS .rtf` (git-ignored, never committed). Tell user to revoke it in Cloudflare.
 
 ## Notes
-- All client-side, no backend, no build. Relative paths (works on Pages subpath, CF, file://).
-- Default lang = English; default brand = WeinBus (yellow).
+- Other neuro52 subdomains (clothes, jorakeb, sourcing) were untouched — only `weinbus` CNAME added.
+- Local/playwright DNS had negative-cache lag; public resolvers (1.1.1.1/8.8.8.8) resolve fine.
