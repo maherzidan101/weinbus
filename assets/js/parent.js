@@ -171,6 +171,7 @@
     };
     v.querySelectorAll("[data-kid]").forEach((b) => b.addEventListener("click", () => { selKid = b.getAttribute("data-kid"); renderTrack(); pushTick(); }));
     v.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", () => showView(b.getAttribute("data-go"))));
+    WB.applyBrandDom(v);
     pushTick();
   }
   function crewRow(p, role) {

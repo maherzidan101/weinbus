@@ -1,0 +1,251 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "WeinBus" [ref=e5] [cursor=pointer]:
+        - /url: index.html
+        - img "WeinBus" [ref=e6]
+      - generic [ref=e7]:
+        - link "كيف يعمل" [ref=e8] [cursor=pointer]:
+          - /url: "#how"
+        - link "المزايا" [ref=e9] [cursor=pointer]:
+          - /url: "#features"
+        - link "التطبيقات" [ref=e10] [cursor=pointer]:
+          - /url: "#apps"
+        - link "للمدارس" [ref=e11] [cursor=pointer]:
+          - /url: "#schools"
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - button "EN" [ref=e14] [cursor=pointer]
+          - button "ع" [ref=e15] [cursor=pointer]
+        - link "جرّب العرض" [ref=e16] [cursor=pointer]:
+          - /url: demo.html
+  - banner [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - img [ref=e21]
+          - text: تتبّع باصات المدارس مباشرةً
+        - heading "اعرف دائماً وين الباص 🚌" [level=1] [ref=e24]
+        - paragraph [ref=e25]: يتابع الأهالي الباص لحظةً بلحظة، ويصلهم تنبيه فور صعود طفلهم بأمان. وتدير مدرستك كل المسارات من منصّة واحدة هادئة تحمل هويتها.
+        - generic [ref=e26]:
+          - link "جرّب العرض المباشر" [ref=e27] [cursor=pointer]:
+            - /url: demo.html
+            - img [ref=e28]
+            - text: جرّب العرض المباشر
+          - link "شاهد كيف يعمل" [ref=e30] [cursor=pointer]:
+            - /url: "#how"
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - img [ref=e33]
+            - text: عربي وإنجليزي
+          - generic [ref=e36]:
+            - img [ref=e37]
+            - text: مصمّم للأردن
+          - generic [ref=e40]:
+            - img [ref=e41]
+            - text: بهوية مدرستك
+      - generic [ref=e44]:
+        - img "أطفال سعداء يصعدون باص وين الباص" [ref=e45]
+        - generic [ref=e46]:
+          - generic [ref=e47]: ✅
+          - generic [ref=e48]:
+            - text: صعدت لانا
+            - generic [ref=e49]: 7:13 AM · الباص 7
+        - generic [ref=e52]:
+          - text: على بُعد 5 د
+          - generic [ref=e53]: شارع الجامعة
+  - generic [ref=e55]:
+    - generic [ref=e56]: مشكلة الصباح
+    - heading "لا يجب أن يكون التوصيل لعبة تخمين" [level=2] [ref=e57]
+    - paragraph [ref=e58]: بدون رؤية واضحة، يتّصل الأهالي بالإدارة، وتزدحم البوابة، ولا أحد يعرف فعلاً أين الباص الآن.
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - img [ref=e62]
+        - heading "أهالٍ قلقون" [level=3] [ref=e65]
+        - paragraph [ref=e66]: «هل وصل الباص؟» سؤال يتكرّر كل صباح، تجيب عنه الحيرة لا الحقائق.
+      - generic [ref=e67]:
+        - img [ref=e69]
+        - heading "اتصالات بحثاً عن إجابة" [level=3] [ref=e71]
+        - paragraph [ref=e72]: ينتهي الأمر بالأهالي يتّصلون بالمدرسة أو المرافِقة أو المسؤول عن النقل، فقط ليعرفوا أين الباص.
+  - generic [ref=e74]:
+    - generic [ref=e75]:
+      - generic [ref=e76]: كيف يعمل
+      - heading "ثلاثة أدوار، منصّة واحدة متّصلة" [level=2] [ref=e77]
+      - paragraph [ref=e78]: من إدارة المدرسة، إلى الباص، إلى هاتف ولي الأمر، تبقى كل خطوة متزامنة.
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - generic [ref=e81]: "1"
+        - img [ref=e83]
+        - heading "المدرسة تجهّز كل شيء" [level=3] [ref=e87]
+        - paragraph [ref=e88]: أضِف الباصات والمسارات والمحطات والطلاب والأهالي في اللوحة، ثم عيّن سائقاً ومرافِقة لكل باص.
+      - generic [ref=e89]:
+        - generic [ref=e90]: "2"
+        - img [ref=e92]
+        - heading "المرافِقة تدير الرحلة" [level=3] [ref=e96]
+        - paragraph [ref=e97]: نقرة واحدة تبدأ الرحلة. يُبثّ الموقع مباشرةً، ويُسجَّل صعود كل طفل بنقرة أو بمسح سوار QR.
+      - generic [ref=e98]:
+        - generic [ref=e99]: "3"
+        - img [ref=e101]
+        - heading "الأهالي يتابعون" [level=3] [ref=e103]
+        - paragraph [ref=e104]: خريطة مباشرة، وعدّاد حتى محطتهم، وتنبيه لطيف فور صعود طفلهم بأمان.
+  - generic [ref=e106]:
+    - generic [ref=e107]:
+      - generic [ref=e108]: المزايا
+      - heading "كل ما تحتاجه رحلة آمنة" [level=2] [ref=e109]
+    - generic [ref=e110]:
+      - generic [ref=e111]:
+        - img [ref=e113]
+        - heading "خريطة مباشرة" [level=3] [ref=e116]
+        - paragraph [ref=e117]: تابع الباص يتحرّك على مساره لحظة بلحظة.
+      - generic [ref=e118]:
+        - img [ref=e120]
+        - heading "تنبيهات وصول ذكية" [level=3] [ref=e123]
+        - paragraph [ref=e124]: «على بُعد 5 دقائق»، محدّدة لكل محطة.
+      - generic [ref=e125]:
+        - img [ref=e127]
+        - heading "تسجيل الصعود" [level=3] [ref=e132]
+        - paragraph [ref=e133]: نقرة أو مسح سوار QR، مع الوقت الدقيق للأهالي.
+      - generic [ref=e134]:
+        - img [ref=e136]
+        - heading "أكثر من طفل" [level=3] [ref=e141]
+        - paragraph [ref=e142]: حساب واحد يتابع كل طفل، عبر الباصات والفترات.
+      - generic [ref=e143]:
+        - img [ref=e145]
+        - heading "بهوية مدرستك" [level=3] [ref=e148]
+        - paragraph [ref=e149]: شعارك، ألوانك، ونطاقك الفرعي الخاص.
+      - generic [ref=e150]:
+        - img [ref=e152]
+        - heading "عربي وإنجليزي" [level=3] [ref=e155]
+        - paragraph [ref=e156]: دعم كامل للكتابة من اليمين. والأرقام تبقى لاتينية.
+      - generic [ref=e157]:
+        - img [ref=e159]
+        - heading "سجل تدقيق كامل" [level=3] [ref=e162]
+        - paragraph [ref=e163]: كل صعود ونزول، موثّق بالوقت ومحفوظ.
+      - generic [ref=e164]:
+        - img [ref=e166]
+        - heading "تعميمات وطوارئ" [level=3] [ref=e169]
+        - paragraph [ref=e170]: رسالة واحدة تصل كل الأهالي. وللسائقين زر طوارئ.
+  - generic [ref=e172]:
+    - generic [ref=e173]:
+      - generic [ref=e174]: التطبيقات
+      - heading "منصّة واحدة، ثلاث تجارب" [level=2] [ref=e175]
+      - paragraph [ref=e176]: افتح أيّاً منها، فجميعها نماذج تفاعلية بالكامل.
+    - generic [ref=e177]:
+      - link "👨‍👩‍👧 تطبيق ولي الأمر خريطة مباشرة، وقت الوصول، تنبيهات الصعود وسجل الرحلات. افتح" [ref=e178] [cursor=pointer]:
+        - /url: parent.html
+        - generic [ref=e179]: 👨‍👩‍👧
+        - heading "تطبيق ولي الأمر" [level=3] [ref=e180]
+        - paragraph [ref=e181]: خريطة مباشرة، وقت الوصول، تنبيهات الصعود وسجل الرحلات.
+        - generic [ref=e182]:
+          - text: افتح
+          - img [ref=e183]
+      - link "🚌 تطبيق المرافِقة ابدأ الرحلة، سجّل صعود الطلاب، وابثّ الموقع. افتح" [ref=e185] [cursor=pointer]:
+        - /url: chaperone.html
+        - generic [ref=e186]: 🚌
+        - heading "تطبيق المرافِقة" [level=3] [ref=e187]
+        - paragraph [ref=e188]: ابدأ الرحلة، سجّل صعود الطلاب، وابثّ الموقع.
+        - generic [ref=e189]:
+          - text: افتح
+          - img [ref=e190]
+      - link "🏫 لوحة المدرسة الأسطول، المسارات، الطلاب، المراقبة المباشرة والهوية. افتح" [ref=e192] [cursor=pointer]:
+        - /url: admin.html
+        - generic [ref=e193]: 🏫
+        - heading "لوحة المدرسة" [level=3] [ref=e194]
+        - paragraph [ref=e195]: الأسطول، المسارات، الطلاب، المراقبة المباشرة والهوية.
+        - generic [ref=e196]:
+          - text: افتح
+          - img [ref=e197]
+    - link "شاهدها تتزامن في العرض المباشر" [ref=e200] [cursor=pointer]:
+      - /url: demo.html
+      - img [ref=e201]
+      - text: شاهدها تتزامن في العرض المباشر
+  - generic [ref=e205]:
+    - generic [ref=e206]:
+      - generic [ref=e207]: منصّة بهويتك
+      - heading "مدرستك. تطبيقك." [level=2] [ref=e208]
+      - paragraph [ref=e209]: "يثبّت الأهالي تطبيقاً يبدو ويُحسّ وكأنه مدرستكم بالكامل: شعارُكم، ألوانُكم، ونطاقُكم الفرعي الخاص. ويعمل وين الباص بهدوء في الخلفية."
+      - generic [ref=e210]:
+        - generic [ref=e211]:
+          - img [ref=e213]
+          - generic [ref=e216]: شعارُكم وألوانُكم وأيقونة تطبيقكم
+        - generic [ref=e217]:
+          - img [ref=e219]
+          - generic [ref=e222]: نطاق فرعي خاص، مثل al-manhal.weinbus.app
+        - generic [ref=e223]:
+          - img [ref=e225]
+          - generic [ref=e228]: كل مدرسة مساحة عمل معزولة بالكامل
+      - link "شاهد الهوية مباشرةً" [ref=e229] [cursor=pointer]:
+        - /url: admin.html#branding
+        - text: شاهد الهوية مباشرةً
+        - img [ref=e230]
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - img [ref=e234]:
+          - generic [ref=e236]: M
+        - generic [ref=e237]:
+          - text: مدارس المنهل الدولية
+          - generic [ref=e238]: al-manhal.weinbus.app
+      - generic [ref=e239]:
+        - img [ref=e240]:
+          - generic [ref=e242]: R
+        - generic [ref=e243]:
+          - text: مدارس روابي الحديثة
+          - generic [ref=e244]: rawabi.weinbus.app
+      - generic [ref=e245]:
+        - img [ref=e246]:
+          - generic [ref=e248]: B
+        - generic [ref=e249]:
+          - text: أكاديمية البيان
+          - generic [ref=e250]: al-bayan.weinbus.app
+      - generic [ref=e251]:
+        - img "WeinBus" [ref=e253]
+        - generic [ref=e254]:
+          - text: وين الباص
+          - generic [ref=e255]: weinbus.weinbus.app
+  - generic [ref=e258]:
+    - heading "أحضِر وين الباص إلى مدرستك" [level=2] [ref=e259]
+    - paragraph [ref=e260]: امنح كل أب وأم راحة البال، وامنح مكتبك صباحاً أهدأ.
+    - generic [ref=e261]:
+      - link "احجز عرضاً مباشراً" [ref=e262] [cursor=pointer]:
+        - /url: mailto:hello@weinbus.app?subject=WeinBus%20demo
+        - img [ref=e263]
+        - text: احجز عرضاً مباشراً
+      - link "افتح العرض" [ref=e265] [cursor=pointer]:
+        - /url: demo.html
+  - contentinfo [ref=e266]:
+    - generic [ref=e267]:
+      - generic [ref=e268]:
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - img "WeinBus" [ref=e272]
+            - generic [ref=e273]: WeinBus
+          - paragraph [ref=e274]: اعرف دائماً وين الباص.
+          - generic [ref=e275]: صُنع بعناية في عمّان 🇯🇴
+        - generic [ref=e276]:
+          - generic [ref=e277]: المنتج
+          - generic [ref=e278]:
+            - link "المزايا" [ref=e279] [cursor=pointer]:
+              - /url: "#features"
+            - link "كيف يعمل" [ref=e280] [cursor=pointer]:
+              - /url: "#how"
+            - link "للمدارس" [ref=e281] [cursor=pointer]:
+              - /url: "#schools"
+            - link "العرض المباشر" [ref=e282] [cursor=pointer]:
+              - /url: demo.html
+        - generic [ref=e283]:
+          - generic [ref=e284]: التطبيقات
+          - generic [ref=e285]:
+            - link "تطبيق ولي الأمر" [ref=e286] [cursor=pointer]:
+              - /url: parent.html
+            - link "تطبيق المرافِقة" [ref=e287] [cursor=pointer]:
+              - /url: chaperone.html
+            - link "لوحة المدرسة" [ref=e288] [cursor=pointer]:
+              - /url: admin.html
+        - generic [ref=e289]:
+          - generic [ref=e290]: اللغة
+          - generic [ref=e291]:
+            - button "English" [ref=e292] [cursor=pointer]
+            - button "العربية" [ref=e293] [cursor=pointer]
+      - generic [ref=e294]:
+        - generic [ref=e295]: © 2026 WeinBus · عرض تجريبي
+        - generic [ref=e296]: weinbus.euro52.com
