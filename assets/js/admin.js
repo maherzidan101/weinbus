@@ -54,7 +54,12 @@
     "a.logo": { en: "Logo", ar: "الشعار" },
     "a.applyNote": { en: "Applies instantly to the Parent app, Chaperone app and this console.", ar: "يُطبَّق فوراً على تطبيق ولي الأمر وتطبيق المرافِقة وهذه اللوحة." },
     "a.active": { en: "Active", ar: "نشط" },
-    "a.principal": { en: "Principal", ar: "مديرة المدرسة" }
+    "a.principal": { en: "Principal", ar: "مديرة المدرسة" },
+    "a.crew": { en: "Crew", ar: "الطاقم" },
+    "a.role": { en: "Role", ar: "الدور" },
+    "a.name": { en: "Name", ar: "الاسم" },
+    "a.chaperonesN": { en: "chaperones", ar: "مرافِقات" },
+    "a.driversN": { en: "drivers", ar: "سائقون" }
   });
 
   const ROUTES = [
@@ -212,6 +217,32 @@
       </tbody></table></div>`;
   }
 
+  /* ---------- CREW (chaperones + drivers) ---------- */
+  function ini(n) { return n.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase(); }
+  function genPhone(seed) { let h = 0; for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0; const p = ["77", "78", "79"][h % 3], n = String(h % 10000000).padStart(7, "0"); return `+962 ${p} ${n.slice(0, 3)} ${n.slice(3)}`; }
+  function crewList() {
+    const ch = D.staff.chaperone, dr = D.staff.driver, rows = [];
+    rows.push({ name: pick(ch.name), role: "chaperone", bus: 7, route: "A", phone: ch.phone, status: "live", photo: ch.photo, initials: ch.initials, color: ch.color });
+    rows.push({ name: pick(dr.name), role: "driver", bus: 7, route: "A", phone: dr.phone, status: "live", initials: dr.initials, color: dr.color });
+    D.fleet.filter((b) => b.no !== 7 && b.chap !== "-").forEach((b) => {
+      rows.push({ name: b.chap, role: "chaperone", bus: b.no, route: b.route, phone: genPhone(b.chap), status: b.status, initials: ini(b.chap), color: "#8B7CF6" });
+      rows.push({ name: b.driver, role: "driver", bus: b.no, route: b.route, phone: genPhone(b.driver), status: b.status, initials: ini(b.driver), color: "#1E88E5" });
+    });
+    return rows.sort((a, b) => (a.role === b.role ? a.bus - b.bus : (a.role === "chaperone" ? -1 : 1)));
+  }
+  function renderCrew() {
+    const crew = crewList(), chaps = crew.filter((c) => c.role === "chaperone").length;
+    qs("#main").innerHTML = pageHead(WB.t("a.crew"), `${chaps} ${WB.t("a.chaperonesN")} · ${crew.length - chaps} ${WB.t("a.driversN")}`,
+      searchBox() + `<button class="btn btn--primary btn--sm">${icon("plus", { width: 16, height: 16 })} ${WB.t("a.add")}</button>`) + `
+      <div class="card" style="overflow:auto"><table class="data-table"><thead><tr>
+        <th>${WB.t("a.name")}</th><th>${WB.t("a.role")}</th><th>${WB.t("a.bus")}</th><th>${WB.t("a.route")}</th><th>${WB.t("a.phone")}</th><th>${WB.t("a.statusH")}</th></tr></thead><tbody>
+        ${crew.map((c) => `<tr>
+          <td><div class="row gap2">${c.photo ? `<div class="avatar avatar--sm"><img src="${c.photo}"></div>` : `<div class="avatar avatar--sm" style="background:${c.color}">${c.initials}</div>`}<b>${c.name}</b></div></td>
+          <td>${c.role === "chaperone" ? `<span class="badge badge--purple">${WB.t("a.chaperone")}</span>` : `<span class="badge badge--info">${WB.t("a.driver")}</span>`}</td>
+          <td class="num">${c.bus}</td><td>${c.route}</td><td class="num">${c.phone}</td><td>${badgeFor(c.status)}</td></tr>`).join("")}
+      </tbody></table></div>`;
+  }
+
   /* ---------- BRANDING (white-label) ---------- */
   function renderBranding() {
     const th = WB.themes[WB.brand];
@@ -248,8 +279,8 @@
 
   /* ---------- nav ---------- */
   let currentView = "dashboard";
-  const NAV = [["dashboard", "chart"], ["fleet", "bus"], ["routes", "route"], ["students", "users"], ["parents", "heart"], ["branding", "sparkles"]];
-  const RENDER = { dashboard: renderDashboard, fleet: renderFleet, routes: renderRoutes, students: renderStudents, parents: renderParents, branding: renderBranding };
+  const NAV = [["dashboard", "chart"], ["fleet", "bus"], ["routes", "route"], ["students", "users"], ["parents", "heart"], ["crew", "user"], ["branding", "sparkles"]];
+  const RENDER = { dashboard: renderDashboard, fleet: renderFleet, routes: renderRoutes, students: renderStudents, parents: renderParents, crew: renderCrew, branding: renderBranding };
   function renderNav() {
     qs("#nav").innerHTML = NAV.map(([id, ic]) => `<div class="nav-link ${id === currentView ? "active" : ""}" data-nav="${id}">${icon(ic, { width: 20, height: 20 })}<span>${WB.t("a." + id)}</span></div>`).join("");
     qsa("[data-nav]").forEach((n) => n.addEventListener("click", () => go(n.getAttribute("data-nav"))));

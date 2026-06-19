@@ -171,6 +171,12 @@
   }
 
   WB.onLang(render);
-  function init() { WB.setBrand("weinbus"); render(); }
+  function init() {
+    WB.setBrand("weinbus");
+    WB.lang = "en"; // the pitch landing always opens in English (apps keep their own saved language)
+    document.documentElement.setAttribute("lang", "en");
+    document.documentElement.setAttribute("dir", "ltr");
+    render();
+  }
   if (document.readyState !== "loading") init(); else document.addEventListener("DOMContentLoaded", init);
 })(window.WB);
