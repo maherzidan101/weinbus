@@ -140,7 +140,7 @@
     <section class="section"><div class="container"><div class="cta-band reveal">
       <img src="assets/img/mascot.png" alt="" style="width:84px;margin:0 auto 14px;filter:drop-shadow(0 10px 16px rgba(32,48,74,.2))">
       <h2>${L("Bring WeinBus to your school", "أحضِر وين الباص إلى مدرستك")}</h2>
-      <p style="color:var(--brand-on-primary);opacity:.92;font-size:var(--fs-lg);max-width:52ch;margin:12px auto 0">${L("Give every parent peace of mind, and give your office a quieter morning.", "امنح كل أب وأم راحة البال، وامنح مكتبك صباحاً أهدأ.")}</p>
+      <p style="color:var(--brand-on-primary);opacity:.92;font-size:var(--fs-lg);max-width:52ch;margin:12px auto 0">${L("Give every parent peace of mind.", "امنح كل أب وأم راحة البال.")}</p>
       <div class="row gap3 center" style="margin-top:26px;flex-wrap:wrap">
         <a class="btn btn--dark btn--lg" href="mailto:hello@weinbus.app?subject=WeinBus%20demo">${icon("message", { width: 18, height: 18 })} ${L("Book a live demo", "احجز عرضاً مباشراً")}</a>
         <a class="btn btn--ghost btn--lg" href="demo.html">${L("Open the demo", "افتح العرض")}</a>

@@ -1,0 +1,130 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: 11:57
+      - generic [ref=e5]:
+        - img [ref=e6]
+        - img [ref=e11]
+        - img [ref=e13]
+    - generic [ref=e17]:
+      - banner [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - img "WeinBus" [ref=e22]
+            - generic [ref=e23]: وين الباص
+          - generic [ref=e24]:
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - generic [ref=e29]: RH
+        - generic [ref=e30]:
+          - generic [ref=e31]: صباح الخير, رنا 👋
+          - generic [ref=e32]: صباحي · المسار A · خلدا ← المنهل
+        - generic [ref=e33]:
+          - button "LH لانا" [ref=e34] [cursor=pointer]:
+            - generic [ref=e35]: LH
+            - generic [ref=e36]: لانا
+          - button "YH يوسف" [ref=e37] [cursor=pointer]:
+            - generic [ref=e38]: YH
+            - generic [ref=e39]: يوسف
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - img [ref=e43]
+          - generic [ref=e78]:
+            - generic [ref=e81]: مباشر
+            - generic [ref=e82]:
+              - img [ref=e83]
+              - generic [ref=e87]: الباص 7
+          - generic [ref=e91]: الآنسة هدى · المرافِقة
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e94]:
+              - generic [ref=e95]:
+                - generic [ref=e96]: LH
+                - generic [ref=e97]: لانا
+                - generic [ref=e99]:
+                  - img [ref=e100]
+                  - text: بالانتظار
+              - generic [ref=e103]: حتى محطتكم
+              - generic [ref=e104]:
+                - generic [ref=e105]: "14"
+                - generic [ref=e106]: دقيقة
+            - generic [ref=e107]:
+              - generic [ref=e108]: "0"
+              - generic [ref=e109]: على الباص
+          - generic [ref=e111]:
+            - generic [ref=e112]: مرآب خلدا
+            - generic [ref=e113]: "التالي: تلاع العلي"
+            - generic [ref=e114]: مدرسة المنهل
+        - generic [ref=e115]:
+          - generic [ref=e116]: المسار والمحطات
+          - generic [ref=e117]:
+            - generic [ref=e123]:
+              - generic [ref=e124]: مرآب خلدا
+              - generic [ref=e125]: 6:55 ص
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - generic [ref=e132]: تلاع العلي
+                - generic [ref=e133]: 7:06 ص
+              - generic [ref=e134]: عمر، كريم
+            - generic [ref=e139]:
+              - generic [ref=e140]:
+                - generic [ref=e141]: شارع الجامعة
+                - generic [ref=e142]: 7:13 ص
+              - generic [ref=e143]: سلمى، لانا، يوسف
+            - generic [ref=e148]:
+              - generic [ref=e149]:
+                - generic [ref=e150]: الجاردنز · وصفي التل
+                - generic [ref=e151]: 7:22 ص
+              - generic [ref=e152]: تيا، آدم، جنى
+            - generic [ref=e157]:
+              - generic [ref=e158]: مدرسة المنهل
+              - generic [ref=e159]: 7:35 ص
+        - generic [ref=e160]:
+          - generic [ref=e161]: طاقم اليوم
+          - generic [ref=e162]:
+            - generic [ref=e165]:
+              - text: هدى الرشيد
+              - generic [ref=e166]: المرافِقة · الباص 7
+            - generic [ref=e167]:
+              - link "اتصال" [ref=e168] [cursor=pointer]:
+                - /url: tel:+962784332071
+                - img [ref=e169]
+                - generic [ref=e171]: اتصال
+              - button [ref=e172] [cursor=pointer]:
+                - img [ref=e173]
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e178]: AK
+              - generic [ref=e179]:
+                - text: أحمد الخطّاب
+                - generic [ref=e180]: السائق · الباص 7
+            - generic [ref=e181]:
+              - link "اتصال" [ref=e182] [cursor=pointer]:
+                - /url: tel:+962796128840
+                - img [ref=e183]
+                - generic [ref=e185]: اتصال
+              - button [ref=e186] [cursor=pointer]:
+                - img [ref=e187]
+    - navigation [ref=e190]:
+      - generic [ref=e191]:
+        - img [ref=e192]
+        - generic [ref=e195]: تتبّع
+      - generic [ref=e196]:
+        - img [ref=e197]
+        - generic [ref=e200]: التنبيهات
+        - generic [ref=e201]: "1"
+      - generic [ref=e202]:
+        - img [ref=e203]
+        - generic [ref=e208]: الأبناء
+      - generic [ref=e209]:
+        - img [ref=e210]
+        - generic [ref=e213]: المزيد
+  - link "العودة إلى الموقع" [ref=e214] [cursor=pointer]:
+    - /url: index.html#apps
+    - img [ref=e216]
+    - generic [ref=e218]: العودة إلى الموقع
+  - status [ref=e219]:
+    - generic [ref=e220]: 🚌
+    - generic [ref=e221]:
+      - generic [ref=e222]: بدأت الرحلة الصباحية
+      - generic [ref=e223]: انطلق الباص 7 في رحلته الصباحية, وهو في طريقه إلى محطتكم.
