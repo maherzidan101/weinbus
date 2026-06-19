@@ -1,0 +1,150 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e6]
+        - generic [ref=e16]:
+          - text: وين الباص
+          - generic [ref=e17]: School Console
+      - navigation [ref=e18]:
+        - generic [ref=e19] [cursor=pointer]:
+          - img [ref=e20]
+          - generic [ref=e24]: الرئيسية
+        - generic [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+          - generic [ref=e30]: الأسطول
+        - generic [ref=e31] [cursor=pointer]:
+          - img [ref=e32]
+          - generic [ref=e36]: المسارات
+        - generic [ref=e37] [cursor=pointer]:
+          - img [ref=e38]
+          - generic [ref=e43]: الطلاب
+        - generic [ref=e44] [cursor=pointer]:
+          - img [ref=e45]
+          - generic [ref=e47]: أولياء الأمور
+        - generic [ref=e48] [cursor=pointer]:
+          - img [ref=e49]
+          - generic [ref=e52]: الهوية
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - button "EN" [ref=e56] [cursor=pointer]
+            - button "ع" [ref=e57] [cursor=pointer]
+          - generic [ref=e59]: تجريبي
+        - generic [ref=e60]:
+          - generic [ref=e61]: LQ
+          - generic [ref=e62]:
+            - text: ليلى قاسم
+            - generic [ref=e63]: مديرة المدرسة
+    - main [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - heading "الرئيسية" [level=2] [ref=e67]
+          - generic [ref=e68]: الفترة الصباحية · اليوم
+        - generic [ref=e69]:
+          - generic [ref=e70]: مباشر
+          - generic [ref=e72]:
+            - img [ref=e73]
+            - generic [ref=e76]: Search…
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - img [ref=e80]
+          - generic [ref=e84]: "0"
+          - generic [ref=e85]: الباصات النشطة
+        - generic [ref=e86]:
+          - img [ref=e88]
+          - generic [ref=e93]: "0"
+          - generic [ref=e94]: طلاب على المتن
+        - generic [ref=e95]:
+          - img [ref=e97]
+          - generic [ref=e100]: "0"
+          - generic [ref=e101]: في الوقت
+        - generic [ref=e102]:
+          - img [ref=e104]
+          - generic [ref=e108]: "0"
+          - generic [ref=e109]: رحلات اليوم
+      - generic [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e112]: مراقبة الأسطول المباشرة
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: A
+              - generic [ref=e117]:
+                - generic [ref=e118]: المسار A · الباص 7
+                - generic [ref=e119]: مباشر
+              - generic [ref=e123]:
+                - text: 4/8
+                - generic [ref=e124]: على المتن
+            - generic [ref=e125]:
+              - generic [ref=e126]: B
+              - generic [ref=e128]:
+                - generic [ref=e129]: المسار B · الباص 3
+                - generic [ref=e130]: مباشر
+              - generic [ref=e134]:
+                - text: 18/22
+                - generic [ref=e135]: على المتن
+            - generic [ref=e136]:
+              - generic [ref=e137]: C
+              - generic [ref=e139]:
+                - generic [ref=e140]: المسار C · الباص 5
+                - generic [ref=e141]: مباشر
+              - generic [ref=e145]:
+                - text: 11/19
+                - generic [ref=e146]: على المتن
+            - generic [ref=e147]:
+              - generic [ref=e148]: F
+              - generic [ref=e150]:
+                - generic [ref=e151]: المسار F · الباص 2
+                - generic [ref=e152]: مباشر
+              - generic [ref=e156]:
+                - text: 14/17
+                - generic [ref=e157]: على المتن
+            - generic [ref=e158]:
+              - generic [ref=e159]: D
+              - generic [ref=e161]:
+                - generic [ref=e162]: المسار D · الباص 12
+                - generic [ref=e163]: مكتملة
+              - generic [ref=e166]:
+                - text: 26/26
+                - generic [ref=e167]: على المتن
+            - generic [ref=e168]:
+              - generic [ref=e169]: E
+              - generic [ref=e171]:
+                - generic [ref=e172]: المسار E · الباص 9
+                - generic [ref=e173]: مجدولة
+              - generic [ref=e175]:
+                - text: 0/21
+                - generic [ref=e176]: على المتن
+            - generic [ref=e177]:
+              - generic [ref=e178]: G
+              - generic [ref=e180]:
+                - generic [ref=e181]: المسار G · الباص 8
+                - generic [ref=e182]: مجدولة
+              - generic [ref=e184]:
+                - text: 0/23
+                - generic [ref=e185]: على المتن
+        - generic [ref=e186]:
+          - generic [ref=e187]: الخريطة المباشرة · الباص 7
+          - generic [ref=e188]:
+            - img [ref=e190]:
+              - img [ref=e230]
+            - generic [ref=e237]: مباشر
+      - generic [ref=e239]:
+        - generic [ref=e240]: النشاط الأخير
+        - generic [ref=e241]:
+          - generic [ref=e242]:
+            - generic [ref=e243]: 🏫
+            - generic [ref=e244]: وصل الباص 12 إلى المدرسة
+            - generic [ref=e245]: قبل 4 د
+          - generic [ref=e246]:
+            - generic [ref=e247]: 🚌
+            - generic [ref=e248]: بدأ الباص 3 المسار B
+            - generic [ref=e249]: قبل 11 د
+          - generic [ref=e250]:
+            - generic [ref=e251]: ✅
+            - generic [ref=e252]: صعد 18 طالباً في المسار B
+            - generic [ref=e253]: قبل 12 د
+  - link "العودة إلى الموقع" [ref=e254] [cursor=pointer]:
+    - /url: index.html#apps
+    - img [ref=e256]
+    - generic [ref=e258]: العودة إلى الموقع

@@ -54,15 +54,9 @@ window.WB = window.WB || {};
     size = size || 40;
     const th = WB.themes[id] || WB.themes.weinbus;
     if (th.glyph === "bus") {
-      return `<svg width="${size}" height="${size}" viewBox="0 0 48 48" aria-hidden="true">
-        <rect x="2" y="2" width="44" height="44" rx="13" fill="${th.vars["--brand-primary"]}"/>
-        <g transform="translate(0,1)">
-          <rect x="11" y="15" width="26" height="16" rx="5" fill="#fff"/>
-          <rect x="14.5" y="18.5" width="8" height="5" rx="1.6" fill="${th.vars["--brand-secondary"]}"/>
-          <rect x="25.5" y="18.5" width="8" height="5" rx="1.6" fill="${th.vars["--brand-secondary"]}"/>
-          <circle cx="17" cy="32.5" r="2.6" fill="#20304A"/><circle cx="31" cy="32.5" r="2.6" fill="#20304A"/>
-          <circle cx="33.5" cy="13" r="5" fill="#FF6B6B"/><circle cx="33.5" cy="12.4" r="1.7" fill="#fff"/>
-        </g></svg>`;
+      const r = Math.round(size * 0.26), h = Math.round(size * 0.82);
+      return `<span style="display:inline-grid;place-items:center;width:${size}px;height:${size}px;background:#fff;border-radius:${r}px;box-shadow:0 1px 4px rgba(32,48,74,.14);flex:none;overflow:hidden">
+        <img src="assets/img/weinbus-icon.png" alt="WeinBus" style="height:${h}px;width:auto;display:block"></span>`;
     }
     return `<svg width="${size}" height="${size}" viewBox="0 0 48 48" aria-hidden="true">
       <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#g_${id})"/>

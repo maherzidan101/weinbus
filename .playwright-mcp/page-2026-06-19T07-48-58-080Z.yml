@@ -1,0 +1,286 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "WeinBus" [ref=e5] [cursor=pointer]:
+        - /url: index.html
+        - img [ref=e7]
+        - generic [ref=e17]: WeinBus
+      - generic [ref=e18]:
+        - link "How it works" [ref=e19] [cursor=pointer]:
+          - /url: "#how"
+        - link "Features" [ref=e20] [cursor=pointer]:
+          - /url: "#features"
+        - link "The apps" [ref=e21] [cursor=pointer]:
+          - /url: "#apps"
+        - link "For schools" [ref=e22] [cursor=pointer]:
+          - /url: "#schools"
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - button "EN" [ref=e25] [cursor=pointer]
+          - button "ع" [ref=e26] [cursor=pointer]
+        - link "Try live demo" [ref=e27] [cursor=pointer]:
+          - /url: demo.html
+  - banner [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - img [ref=e32]
+          - text: Live school-bus tracking
+        - heading "Always know where the bus is 🚌" [level=1] [ref=e35]
+        - paragraph [ref=e36]: Parents watch the bus in real time and get an alert the moment their child is safely on board. Your school runs every route from one calm, branded platform.
+        - generic [ref=e37]:
+          - link "Try the live demo" [ref=e38] [cursor=pointer]:
+            - /url: demo.html
+            - img [ref=e39]
+            - text: Try the live demo
+          - link "See how it works" [ref=e41] [cursor=pointer]:
+            - /url: "#how"
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - img [ref=e44]
+            - text: Arabic & English
+          - generic [ref=e47]:
+            - img [ref=e48]
+            - text: Built for Jordan
+          - generic [ref=e51]:
+            - img [ref=e52]
+            - text: White-label
+      - generic [ref=e55]:
+        - img "Happy children boarding a WeinBus school bus" [ref=e56]
+        - generic [ref=e57]:
+          - generic [ref=e58]: ✅
+          - generic [ref=e59]:
+            - text: Lana boarded
+            - generic [ref=e60]: 7:13 AM · Bus 7
+        - generic [ref=e63]:
+          - text: 5 min away
+          - generic [ref=e64]: University Street
+  - generic [ref=e67]:
+    - generic [ref=e68]:
+      - generic [ref=e69]: 92%
+      - generic [ref=e70]: of every trip, logged
+    - generic [ref=e71]:
+      - generic [ref=e72]: "2"
+      - generic [ref=e73]: taps to start a route
+    - generic [ref=e74]:
+      - generic [ref=e75]: Live
+      - generic [ref=e76]: GPS you can watch
+    - generic [ref=e77]:
+      - generic [ref=e78]: "0"
+      - generic [ref=e79]: guesswork at the gate
+  - generic [ref=e81]:
+    - generic [ref=e82]: The morning problem
+    - heading "Drop-off shouldn’t be a guessing game" [level=2] [ref=e83]
+    - paragraph [ref=e84]: Without visibility, parents call the office, the gate gets crowded, and nobody really knows where the bus is right now.
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - img [ref=e88]
+        - heading "Anxious parents" [level=3] [ref=e90]
+        - paragraph [ref=e91]: “Is the bus here yet?” Asked every morning, answered by worry instead of facts.
+      - generic [ref=e92]:
+        - img [ref=e94]
+        - heading "Flooded phone lines" [level=3] [ref=e97]
+        - paragraph [ref=e98]: One small delay turns into 300 WhatsApp messages and a jammed front office.
+      - generic [ref=e99]:
+        - img [ref=e101]
+        - heading "No accountability" [level=3] [ref=e104]
+        - paragraph [ref=e105]: Paper rosters can’t tell you who rode which bus, or exactly when.
+  - generic [ref=e107]:
+    - generic [ref=e108]:
+      - generic [ref=e109]: How it works
+      - heading "Three roles, one connected platform" [level=2] [ref=e110]
+      - paragraph [ref=e111]: From the school office, to the bus, to the parent’s phone, every step stays in sync.
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - generic [ref=e114]: "1"
+        - img [ref=e116]
+        - heading "The school sets it up" [level=3] [ref=e120]
+        - paragraph [ref=e121]: Add buses, routes, stops, students and parents in the console, then assign a driver and a female chaperone to each bus.
+      - generic [ref=e122]:
+        - generic [ref=e123]: "2"
+        - img [ref=e125]
+        - heading "The chaperone drives" [level=3] [ref=e129]
+        - paragraph [ref=e130]: One tap starts the trip. Location streams live, and each child is checked in with a tap or a QR wristband scan.
+      - generic [ref=e131]:
+        - generic [ref=e132]: "3"
+        - img [ref=e134]
+        - heading "Parents follow along" [level=3] [ref=e136]
+        - paragraph [ref=e137]: A live map, a countdown to their stop, and a friendly alert the moment their child is safely on board.
+  - generic [ref=e139]:
+    - generic [ref=e140]:
+      - generic [ref=e141]: Features
+      - heading "Everything a safe ride needs" [level=2] [ref=e142]
+    - generic [ref=e143]:
+      - generic [ref=e144]:
+        - img [ref=e146]
+        - heading "Live GPS map" [level=3] [ref=e149]
+        - paragraph [ref=e150]: Watch the bus move along its route in real time.
+      - generic [ref=e151]:
+        - img [ref=e153]
+        - heading "Smart arrival alerts" [level=3] [ref=e156]
+        - paragraph [ref=e157]: “5 minutes away,” geofenced to each stop.
+      - generic [ref=e158]:
+        - img [ref=e160]
+        - heading "Boarding check-in" [level=3] [ref=e165]
+        - paragraph [ref=e166]: A tap or a QR wristband scan, with the exact time for parents.
+      - generic [ref=e167]:
+        - img [ref=e169]
+        - heading "Multi-child" [level=3] [ref=e174]
+        - paragraph [ref=e175]: One account follows every child, across buses and shifts.
+      - generic [ref=e176]:
+        - img [ref=e178]
+        - heading "White-label" [level=3] [ref=e181]
+        - paragraph [ref=e182]: Your logo, your colors, your own subdomain.
+      - generic [ref=e183]:
+        - img [ref=e185]
+        - heading "Arabic & English" [level=3] [ref=e188]
+        - paragraph [ref=e189]: Full right-to-left support. Numbers stay Latin.
+      - generic [ref=e190]:
+        - img [ref=e192]
+        - heading "Trip audit trail" [level=3] [ref=e195]
+        - paragraph [ref=e196]: Every boarding and drop-off, timestamped and stored.
+      - generic [ref=e197]:
+        - img [ref=e199]
+        - heading "Broadcasts & SOS" [level=3] [ref=e202]
+        - paragraph [ref=e203]: One message reaches every parent. Drivers get an SOS button.
+  - generic [ref=e205]:
+    - generic [ref=e206]:
+      - generic [ref=e207]: The apps
+      - heading "One platform, three experiences" [level=2] [ref=e208]
+      - paragraph [ref=e209]: Open any of them, they’re fully interactive demos.
+    - generic [ref=e210]:
+      - link "👨‍👩‍👧 Parent app Live map, ETA, boarding alerts and trip history. Open" [ref=e211] [cursor=pointer]:
+        - /url: parent.html
+        - generic [ref=e212]: 👨‍👩‍👧
+        - heading "Parent app" [level=3] [ref=e213]
+        - paragraph [ref=e214]: Live map, ETA, boarding alerts and trip history.
+        - generic [ref=e215]:
+          - text: Open
+          - img [ref=e216]
+      - link "🚌 Chaperone app Start the trip, check students in, stream location. Open" [ref=e218] [cursor=pointer]:
+        - /url: chaperone.html
+        - generic [ref=e219]: 🚌
+        - heading "Chaperone app" [level=3] [ref=e220]
+        - paragraph [ref=e221]: Start the trip, check students in, stream location.
+        - generic [ref=e222]:
+          - text: Open
+          - img [ref=e223]
+      - link "🏫 School Console Fleet, routes, students, live monitor & branding. Open" [ref=e225] [cursor=pointer]:
+        - /url: admin.html
+        - generic [ref=e226]: 🏫
+        - heading "School Console" [level=3] [ref=e227]
+        - paragraph [ref=e228]: Fleet, routes, students, live monitor & branding.
+        - generic [ref=e229]:
+          - text: Open
+          - img [ref=e230]
+    - link "See them sync in the live demo" [ref=e233] [cursor=pointer]:
+      - /url: demo.html
+      - img [ref=e234]
+      - text: See them sync in the live demo
+  - generic [ref=e238]:
+    - generic [ref=e239]:
+      - generic [ref=e240]: White-label SaaS
+      - heading "Your school. Your app." [level=2] [ref=e241]
+      - paragraph [ref=e242]: "Parents install an app that looks and feels entirely like your school: your logo, your colors, your own subdomain. WeinBus runs quietly underneath."
+      - generic [ref=e243]:
+        - generic [ref=e244]:
+          - img [ref=e246]
+          - generic [ref=e249]: Your logo, colors & app icon
+        - generic [ref=e250]:
+          - img [ref=e252]
+          - generic [ref=e255]: A private subdomain, e.g. al-manhal.weinbus.app
+        - generic [ref=e256]:
+          - img [ref=e258]
+          - generic [ref=e261]: Each school is a fully isolated workspace
+      - link "See branding live" [ref=e262] [cursor=pointer]:
+        - /url: admin.html#branding
+        - text: See branding live
+        - img [ref=e263]
+    - generic [ref=e265]:
+      - generic [ref=e266]:
+        - img [ref=e267]:
+          - generic [ref=e269]: M
+        - generic [ref=e270]:
+          - text: Al-Manhal International School
+          - generic [ref=e271]: al-manhal.weinbus.app
+      - generic [ref=e272]:
+        - img [ref=e273]:
+          - generic [ref=e275]: R
+        - generic [ref=e276]:
+          - text: Rawabi Modern School
+          - generic [ref=e277]: rawabi.weinbus.app
+      - generic [ref=e278]:
+        - img [ref=e279]:
+          - generic [ref=e281]: B
+        - generic [ref=e282]:
+          - text: Al-Bayan Academy
+          - generic [ref=e283]: al-bayan.weinbus.app
+      - generic [ref=e284]:
+        - img [ref=e285]
+        - generic [ref=e295]:
+          - text: WeinBus
+          - generic [ref=e296]: weinbus.weinbus.app
+  - generic [ref=e298]:
+    - generic [ref=e299]:
+      - generic [ref=e300]: 🇯🇴 Made for Jordan
+      - heading "Local by design, not translated later" [level=2] [ref=e301]
+    - generic [ref=e302]:
+      - generic [ref=e303]:
+        - img [ref=e305]
+        - generic [ref=e308]: Arabic and English with full right-to-left layout
+      - generic [ref=e309]:
+        - img [ref=e311]
+        - generic [ref=e314]: Numbers always in Latin digits (0-9)
+      - generic [ref=e315]:
+        - img [ref=e317]
+        - generic [ref=e320]: Separate driver and female chaperone roles
+      - generic [ref=e321]:
+        - img [ref=e323]
+        - generic [ref=e326]: AM/PM split shifts and Ramadan schedules
+  - generic [ref=e329]:
+    - heading "Bring WeinBus to your school" [level=2] [ref=e330]
+    - paragraph [ref=e331]: Give every parent peace of mind, and give your office a quieter morning.
+    - generic [ref=e332]:
+      - link "Book a live demo" [ref=e333] [cursor=pointer]:
+        - /url: mailto:hello@weinbus.app?subject=WeinBus%20demo
+        - img [ref=e334]
+        - text: Book a live demo
+      - link "Open the demo" [ref=e336] [cursor=pointer]:
+        - /url: demo.html
+  - contentinfo [ref=e337]:
+    - generic [ref=e338]:
+      - generic [ref=e339]:
+        - generic [ref=e340]:
+          - generic [ref=e341]:
+            - img [ref=e342]
+            - generic [ref=e352]: WeinBus
+          - paragraph [ref=e353]: Always know where the bus is.
+          - generic [ref=e354]: Made with care in Amman 🇯🇴
+        - generic [ref=e355]:
+          - generic [ref=e356]: Product
+          - generic [ref=e357]:
+            - link "Features" [ref=e358] [cursor=pointer]:
+              - /url: "#features"
+            - link "How it works" [ref=e359] [cursor=pointer]:
+              - /url: "#how"
+            - link "For schools" [ref=e360] [cursor=pointer]:
+              - /url: "#schools"
+            - link "Live demo" [ref=e361] [cursor=pointer]:
+              - /url: demo.html
+        - generic [ref=e362]:
+          - generic [ref=e363]: Apps
+          - generic [ref=e364]:
+            - link "Parent app" [ref=e365] [cursor=pointer]:
+              - /url: parent.html
+            - link "Chaperone app" [ref=e366] [cursor=pointer]:
+              - /url: chaperone.html
+            - link "School Console" [ref=e367] [cursor=pointer]:
+              - /url: admin.html
+        - generic [ref=e368]:
+          - generic [ref=e369]: Language
+          - generic [ref=e370]:
+            - button "English" [ref=e371] [cursor=pointer]
+            - button "العربية" [ref=e372] [cursor=pointer]
+      - generic [ref=e373]:
+        - generic [ref=e374]: © 2026 WeinBus · Concept demo
+        - generic [ref=e375]: weinbus.euro52.com

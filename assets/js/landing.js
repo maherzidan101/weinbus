@@ -23,7 +23,7 @@
     const schools = ["manhal", "rawabi", "bayan", "weinbus"];
     qs("#page").innerHTML = `
     <nav class="nav"><div class="nav__in">
-      <a class="nav__logo" href="index.html"><span data-brand-logo="38"></span><span data-brand-name>WeinBus</span></a>
+      <a class="nav__logo" href="index.html"><img src="assets/img/weinbus-logo.png" alt="WeinBus" class="nav__logo-img"></a>
       <div class="nav__links">
         <a href="#how">${L("How it works", "كيف يعمل")}</a>
         <a href="#features">${L("Features", "المزايا")}</a>
