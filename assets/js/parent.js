@@ -1,5 +1,5 @@
 /* ============================================================================
-   WeinBus — Parent app
+   WeinBus, Parent app
    ========================================================================== */
 (function (WB) {
   const D = WB.data, qs = WB.qs, icon = WB.icon, pick = WB.pick, fmtTime = WB.fmtTime;
@@ -130,14 +130,14 @@
             <div>
               <div class="row gap2" style="margin-bottom:4px">${av(kid, "avatar--sm")}<b id="t-kidname">${firstName(kid)}</b><span id="t-kidbadge">${statusBadge("waiting")}</span></div>
               <div class="muted small" id="eta-label">${WB.t("p.toStop")}</div>
-              <div class="row" style="align-items:baseline;gap:6px"><span class="eta-num num" id="eta-num">—</span><span class="big bold" id="eta-unit">${WB.t("p.min")}</span></div>
+              <div class="row" style="align-items:baseline;gap:6px"><span class="eta-num num" id="eta-num">-</span><span class="big bold" id="eta-unit">${WB.t("p.min")}</span></div>
             </div>
             <div class="center-text"><div class="eta-num num" id="ob-num">0</div><div class="muted small">${WB.t("p.onboard")}</div></div>
           </div>
           <div class="progress" style="margin-top:14px"><div class="progress__bar" id="eta-bar"></div></div>
           <div class="row between small" style="margin-top:8px">
             <span class="muted">${pick(D.routeA.stops[0].name)}</span>
-            <span class="bold" id="nextstop">—</span>
+            <span class="bold" id="nextstop">-</span>
             <span class="muted">${pick(D.routeA.stops[4].name)}</span>
           </div>
         </div>
@@ -199,7 +199,7 @@
       else if (v <= 0) { R.eta.textContent = NOW; R.etaUnit.style.display = "none"; }
       else { R.eta.textContent = v; R.etaUnit.style.display = ""; }
     };
-    if (!st.started) { R.eta.textContent = "—"; R.etaUnit.style.display = ""; R.etaLabel.textContent = WB.t("p.starts"); }
+    if (!st.started) { R.eta.textContent = "-"; R.etaUnit.style.display = ""; R.etaLabel.textContent = WB.t("p.starts"); }
     else if (st.status === "completed") setEta("🎒", WB.t("p.arrived"));
     else if (status === "waiting") setEta(WB.trip.etaToStop(kid.stop), WB.t("p.toStop"));
     else setEta(st.etaSchool, WB.t("p.toSchool"));
@@ -299,7 +299,7 @@
               <button data-l="en" class="${WB.lang === "en" ? "active" : ""}">English</button>
               <button data-l="ar" class="${WB.lang === "ar" ? "active" : ""}">العربية</button></div></div>
           <div class="hr"></div>
-          <div class="row between"><span class="row gap2">${icon("building", { width: 18, height: 18 })}<b>${WB.t("p.schoolL")}</b></span><span data-brand-name class="muted small">—</span></div>
+          <div class="row between"><span class="row gap2">${icon("building", { width: 18, height: 18 })}<b>${WB.t("p.schoolL")}</b></span><span data-brand-name class="muted small">-</span></div>
         </div>
         <div class="card card--pad stack gap3">
           <a class="row between row-item--btn" href="https://wa.me/962790000000" target="_blank" style="text-decoration:none">

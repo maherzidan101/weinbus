@@ -1,5 +1,5 @@
 /* ============================================================================
-   WeinBus — Chaperone (driver/attendant) app. The live data source.
+   WeinBus, Chaperone (driver/attendant) app. The live data source.
    ========================================================================== */
 (function (WB) {
   const D = WB.data, qs = WB.qs, qsa = WB.qsa, icon = WB.icon, pick = WB.pick, fmtTime = WB.fmtTime;
@@ -26,11 +26,11 @@
     "c.min": { en: "min", ar: "دقيقة" },
     "c.tapBoard": { en: "Tap each student as they board 👇", ar: "اضغط على كل طالب عند صعوده 👇" },
     "c.scan": { en: "Scan QR wristband", ar: "مسح سوار الـ QR" },
-    "c.scanned": { en: "QR scanned — student boarded ✓", ar: "تم المسح — صعد الطالب ✓" },
+    "c.scanned": { en: "QR scanned, student boarded ✓", ar: "تم المسح, صعد الطالب ✓" },
     "c.sos": { en: "SOS", ar: "طوارئ" },
     "c.sosSent": { en: "SOS sent to the Transport Office", ar: "تم إرسال نداء الطوارئ لإدارة النقل" },
     "c.office": { en: "Transport Office", ar: "إدارة النقل" },
-    "c.officeMsg": { en: "Please wait 2 extra min at Gardens — a new student joins today.", ar: "يرجى الانتظار دقيقتين إضافيتين في الجاردنز — ينضم طالب جديد اليوم." },
+    "c.officeMsg": { en: "Please wait 2 extra min at Gardens, a new student joins today.", ar: "يرجى الانتظار دقيقتين إضافيتين في الجاردنز, ينضم طالب جديد اليوم." },
     "c.startFirst": { en: "Start the trip first to check students in.", ar: "ابدأ الرحلة أولاً لتسجيل صعود الطلاب." },
     "c.board": { en: "Board", ar: "صعد" },
     "c.grade": { en: "Grade", ar: "الصف" },
@@ -86,7 +86,7 @@
         <div class="map-card" style="height:158px"><div id="cmap" style="position:absolute;inset:0"></div></div>
         <div class="progress"><div class="progress__bar" id="c-bar"></div></div>
         <div class="row between center-text">
-          <div class="kpi-mini"><span class="muted tiny">${WB.t("c.next")}</span><b class="small" id="c-next">—</b></div>
+          <div class="kpi-mini"><span class="muted tiny">${WB.t("c.next")}</span><b class="small" id="c-next">-</b></div>
           <div class="kpi-mini"><span class="muted tiny">${WB.t("c.eta")}</span><b><span class="num" id="c-eta">0</span> ${WB.t("c.min")}</b></div>
         </div>
         <button class="big-action big-action--stop" id="btn-end">${icon("stop", { width: 22, height: 22 })}<span>${WB.t("c.end")}</span></button>
@@ -104,7 +104,7 @@
         </div>
         <div style="margin-top:12px">
           <div class="greet">${WB.t("c.hi")}, ${firstName(chap)} 👋</div>
-          <div class="dim small">${WB.t("c.morningTrip")} · ${pick(D.routeA.name)} · ${WB.t("c.plate")} ${D.trip.plate}</div>
+          <div class="dim small">${WB.t("c.morningTrip")} · ${pick(D.routeA.name)} · ${WB.t("c.plate")} <span class="num">${D.trip.plate}</span></div>
         </div>
       </header>
       <div class="stack gap4" style="padding:14px 16px 0">
@@ -193,7 +193,7 @@
         <div class="row gap3">${av(chap, "avatar--lg")}<div><div class="greet" style="font-size:var(--fs-lg)">${pick(chap.name)}</div>
         <div class="dim small">${WB.t("c.role")}</div></div></div></header>
       <div class="stack gap5" style="padding:16px">
-        <div class="card card--pad row between"><b>${WB.t("p.language")}</b>
+        <div class="card card--pad row between"><b>${WB.t("common.language")}</b>
           <div class="seg seg--sm" id="more-lang">
             <button data-l="en" class="${WB.lang === "en" ? "active" : ""}">English</button>
             <button data-l="ar" class="${WB.lang === "ar" ? "active" : ""}">العربية</button></div></div>
@@ -202,7 +202,7 @@
           <div class="hr" style="margin:2px 0"></div>
           <div class="row between"><span class="row gap2">${icon("truck", { width: 18, height: 18 })}<b class="small">${pick(D.trip.model)}</b></span><span class="muted small num">${D.trip.plate}</span></div>
         </div>
-        <button class="btn btn--ghost btn--block" style="color:var(--wb-coral-deep)">${WB.t("p.signout")}</button>
+        <button class="btn btn--ghost btn--block" style="color:var(--wb-coral-deep)">${WB.t("common.signout")}</button>
         <div class="center-text muted tiny" style="padding:8px">${WB.t("common.poweredBy")} · v1.0</div>
       </div>`;
     qsa("#more-lang button", v).forEach((b) => b.addEventListener("click", () => WB.setLang(b.getAttribute("data-l"))));

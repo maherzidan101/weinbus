@@ -1,5 +1,5 @@
 /* ============================================================================
-   WeinBus — School Console (admin). Multi-tenant SaaS back office.
+   WeinBus, School Console (admin). Multi-tenant SaaS back office.
    ========================================================================== */
 (function (WB) {
   const D = WB.data, qs = WB.qs, qsa = WB.qsa, icon = WB.icon, pick = WB.pick, fmtTime = WB.fmtTime;
@@ -47,7 +47,7 @@
     "st.onbus": { en: "On bus", ar: "على الباص" },
     "st.atschool": { en: "At school", ar: "في المدرسة" },
     "a.brandTitle": { en: "Make it yours", ar: "اجعلها هويتك" },
-    "a.brandSub": { en: "Every school gets a branded workspace — logo, colors and a private subdomain. Pick a tenant and watch the whole platform re-skin instantly.", ar: "كل مدرسة تحصل على مساحة عمل بهويتها — شعار وألوان ونطاق فرعي خاص. اختر مستأجراً وشاهد إعادة تنسيق المنصة فوراً." },
+    "a.brandSub": { en: "Every school gets a branded workspace, logo, colors and a private subdomain. Pick a tenant and watch the whole platform re-skin instantly.", ar: "كل مدرسة تحصل على مساحة عمل بهويتها, شعار وألوان ونطاق فرعي خاص. اختر مستأجراً وشاهد إعادة تنسيق المنصة فوراً." },
     "a.workspace": { en: "Workspace", ar: "مساحة العمل" },
     "a.subdomain": { en: "Subdomain", ar: "النطاق الفرعي" },
     "a.colors": { en: "Brand colors", ar: "ألوان الهوية" },
@@ -175,7 +175,7 @@
         <div class="timeline">${D.routeA.stops.map((s) => `<div class="tl-row ${st.started && st.progress >= WB.trip.depart[s.i] ? "done" : ""}">
           <div class="tl-node"><div class="tl-dot"></div><div class="tl-line"></div></div>
           <div class="tl-body"><div class="row between"><span class="tl-name">${pick(s.name)}</span><span class="muted small num">${fmtTime(s.time)}</span></div>
-          <div class="muted tiny">${s.kids.length ? s.kids.length + " " + WB.t("a.students") : "—"}</div></div></div>`).join("")}</div>
+          <div class="muted tiny">${s.kids.length ? s.kids.length + " " + WB.t("a.students") : "-"}</div></div></div>`).join("")}</div>
       </div>
       <div class="card" style="overflow:auto"><table class="data-table"><thead><tr>
         <th>${WB.t("a.route")}</th><th>${WB.t("a.routes")}</th><th>${WB.t("a.bus")}</th><th>${WB.t("a.stopsH")}</th><th>${WB.t("a.students")}</th></tr></thead><tbody>
@@ -230,7 +230,7 @@
         </div>
         <div class="card card--pad stack gap5">
           <div><div class="muted uppercase">${WB.t("a.workspace")}</div>
-            <div class="row gap3" style="margin-top:10px">${WB.brandMark(WB.brand, 56)}<div><b class="big" data-brand-name>—</b>
+            <div class="row gap3" style="margin-top:10px">${WB.brandMark(WB.brand, 56)}<div><b class="big" data-brand-name>-</b>
             <div class="muted small num">${slug(th.short.en)}.weinbus.app</div></div></div></div>
           <div><div class="muted uppercase" style="margin-bottom:8px">${WB.t("a.colors")}</div>
             <div class="row gap2">
@@ -261,7 +261,7 @@
     if (e.type === "started") addActivity({ icon: "🚌", tone: "info", title: { en: "Bus 7 started Route A (morning)", ar: "بدأ الباص 7 المسار A (صباحي)" } });
     else if (e.type === "boarded") { addActivity({ icon: "✅", tone: "ok", title: { en: `${pick(e.student.name)} boarded Bus 7`, ar: `صعد ${pick(e.student.name)} إلى الباص 7` } }); if (currentView === "students") qs("#stud-body") && (qs("#stud-body").innerHTML = studentRows(WB.trip.state())); }
     else if (e.type === "arrived") addActivity({ icon: "🏫", tone: "ok", title: { en: "Bus 7 arrived at school", ar: "وصل الباص 7 إلى المدرسة" } });
-    else if (e.type === "completed") { addActivity({ icon: "🎉", tone: "ok", title: { en: "Route A complete — all safe", ar: "اكتمل المسار A — الجميع بأمان" } }); if (currentView === "students") qs("#stud-body") && (qs("#stud-body").innerHTML = studentRows(WB.trip.state())); }
+    else if (e.type === "completed") { addActivity({ icon: "🎉", tone: "ok", title: { en: "Route A complete, all safe", ar: "اكتمل المسار A, الجميع بأمان" } }); if (currentView === "students") qs("#stud-body") && (qs("#stud-body").innerHTML = studentRows(WB.trip.state())); }
   });
   WB.trip.onTick((st) => {
     if (currentView === "dashboard") { paintFleetMon(st); if (amap) amap.update(st); }

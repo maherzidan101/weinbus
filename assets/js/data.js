@@ -1,5 +1,5 @@
 /* ============================================================================
-   WeinBus — Demo data (all dummy). One coherent tenant; white-label switching
+   WeinBus, Demo data (all dummy). One coherent tenant; white-label switching
    re-skins chrome only. Phones = Jordan (+962 7X). Numbers always Latin.
    ========================================================================== */
 window.WB = window.WB || {};
@@ -108,7 +108,7 @@ window.WB = window.WB || {};
     { no: 9,  model: { en: "Mercedes Sprinter", ar: "مرسيدس سبرنتر" }, plate: "29-50122", cap: 24, route: "E", status: "scheduled", driver: "Tariq Mansour",    chap: "Lina Saadeh" },
     { no: 2,  model: { en: "Hyundai County",    ar: "هيونداي كاونتي" },plate: "22-66031", cap: 27, route: "F", status: "live",      driver: "Bashar Najjar",    chap: "Dana Qasem" },
     { no: 8,  model: { en: "Toyota Coaster",    ar: "تويوتا كوستر" },  plate: "16-41288", cap: 30, route: "G", status: "scheduled", driver: "Omar Haddadin",    chap: "Reem Aql" },
-    { no: 4,  model: { en: "Mercedes Sprinter", ar: "مرسيدس سبرنتر" }, plate: "29-33910", cap: 24, route: "—", status: "maintenance",driver: "—",                chap: "—" }
+    { no: 4,  model: { en: "Mercedes Sprinter", ar: "مرسيدس سبرنتر" }, plate: "29-33910", cap: 24, route: "-", status: "maintenance",driver: "-",                chap: "-" }
   ];
 
   /* ---- Admin KPIs (Latin digits) -------------------------------------- */
@@ -133,8 +133,8 @@ window.WB = window.WB || {};
   D.notif = {
     tripStarted: { icon: "🚌", tone: "info",
       title: { en: "Morning trip started", ar: "بدأت الرحلة الصباحية" },
-      msg:   { en: "Bus {bus} has started the morning route — on its way to your stop.",
-               ar: "انطلق الباص {bus} في رحلته الصباحية — وهو في طريقه إلى محطتكم." } },
+      msg:   { en: "Bus {bus} has started the morning route, on its way to your stop.",
+               ar: "انطلق الباص {bus} في رحلته الصباحية, وهو في طريقه إلى محطتكم." } },
     approaching: { icon: "📍", tone: "warn",
       title: { en: "Bus is approaching", ar: "الباص يقترب" },
       msg:   { en: "Bus {bus} is about {min} minutes from {stop}. Please head out.",

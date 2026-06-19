@@ -1,5 +1,5 @@
 /* ============================================================================
-   WeinBus — Stylized live map (self-contained SVG, no tiles/keys/network).
+   WeinBus, Stylized live map (self-contained SVG, no tiles/keys/network).
    Reads trip-sim's segIndex/segT and moves the bus along the REAL drawn path
    using getPointAtLength, so motion follows the road curve exactly.
    ========================================================================== */
@@ -23,7 +23,7 @@ window.WB = window.WB || {};
   const ROUTE_D = smoothPath(PTS);
 
   function deco() {
-    // soft city blocks, a park, a roundabout, a mosque & houses — muted so route pops
+    // soft city blocks, a park, a roundabout, a mosque & houses, muted so route pops
     return `
       <rect x="20" y="40" width="150" height="120" rx="18" fill="#FFFFFF" opacity=".7"/>
       <rect x="250" y="30" width="180" height="90" rx="18" fill="#FFFFFF" opacity=".7"/>

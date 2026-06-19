@@ -1,9 +1,9 @@
 /* ============================================================================
-   WeinBus — i18n engine + cross-frame sync
+   WeinBus, i18n engine + cross-frame sync
    - Central dictionary, pages contribute via WB.addStrings({...})
    - data-i18n / data-i18n-html / data-i18n-ph / data-i18n-aria attributes
    - WB.pick({en,ar}) for data-driven bilingual content
-   - Numbers are NEVER converted — Latin digits everywhere (Jordan preference)
+   - Numbers are NEVER converted, Latin digits everywhere (Jordan preference)
    - BroadcastChannel('weinbus') keeps language in sync across iframes
    ========================================================================== */
 window.WB = window.WB || {};
@@ -108,6 +108,8 @@ window.WB = window.WB || {};
     "common.arabic":  { en: "العربية", ar: "العربية" },
     "common.english": { en: "English", ar: "English" },
     "common.demo":    { en: "Demo", ar: "تجريبي" },
-    "common.poweredBy": { en: "Powered by WeinBus", ar: "مدعوم من وين الباص" }
+    "common.poweredBy": { en: "Powered by WeinBus", ar: "مدعوم من وين الباص" },
+    "common.language": { en: "Language", ar: "اللغة" },
+    "common.signout":  { en: "Sign out", ar: "تسجيل الخروج" }
   });
 })(window.WB);

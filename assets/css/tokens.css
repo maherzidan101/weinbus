@@ -1,5 +1,5 @@
 /* ============================================================================
-   WeinBus — Design Tokens
+   WeinBus, Design Tokens
    The single source of truth for color, type, space, radius, shadow & motion.
    White-label brand vars (--brand-*) are overridden per school by brand.js.
    ========================================================================== */
@@ -24,7 +24,7 @@
   --wb-amber-soft:  #FFE8D4;
 
   /* ---- Ink & neutrals (warm, never pure black) ------------------------ */
-  --ink:        #20304A;       /* primary text — deep friendly navy */
+  --ink:        #20304A;       /* primary text, deep friendly navy */
   --ink-2:      #4A5A72;       /* secondary text */
   --ink-3:      #7C8AA0;       /* muted text */
   --line:       #E9EBF1;       /* hairline borders */

@@ -1,5 +1,5 @@
 /* ============================================================================
-   WeinBus — Shared UI helpers: icons, toasts, confetti, formatting, reveals.
+   WeinBus, Shared UI helpers: icons, toasts, confetti, formatting, reveals.
    ========================================================================== */
 window.WB = window.WB || {};
 (function (WB) {

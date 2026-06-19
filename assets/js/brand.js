@@ -1,5 +1,5 @@
 /* ============================================================================
-   WeinBus — White-label engine. Swaps theme colors, logo & school name across
+   WeinBus, White-label engine. Swaps theme colors, logo & school name across
    the whole product (and across iframes via BroadcastChannel). This is the
    SaaS "money shot": one platform, every school feels like their own app.
    ========================================================================== */

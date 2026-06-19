@@ -1,5 +1,5 @@
 /* ============================================================================
-   WeinBus — Demo cockpit controller. Drives the three embedded apps in sync.
+   WeinBus, Demo cockpit controller. Drives the three embedded apps in sync.
    ========================================================================== */
 (function (WB) {
   const qs = WB.qs, qsa = WB.qsa, pick = WB.pick;
@@ -7,7 +7,7 @@
   WB.addStrings({
     "demo.live": { en: "Live demo", ar: "عرض مباشر" },
     "demo.brandLabel": { en: "School:", ar: "المدرسة:" },
-    "demo.hint": { en: "Tap <b>Start morning trip</b> and watch the bus move and alerts pop across all three apps — live and in sync. Switch the <b>school</b> or <b>language</b> any time.", ar: "اضغط <b>ابدأ الرحلة الصباحية</b> وشاهد الباص يتحرّك والتنبيهات تظهر في التطبيقات الثلاثة — مباشرةً وبالتزامن. غيّر <b>المدرسة</b> أو <b>اللغة</b> في أي وقت." },
+    "demo.hint": { en: "Tap <b>Start morning trip</b> and watch the bus move and alerts pop across all three apps, live and in sync. Switch the <b>school</b> or <b>language</b> any time.", ar: "اضغط <b>ابدأ الرحلة الصباحية</b> وشاهد الباص يتحرّك والتنبيهات تظهر في التطبيقات الثلاثة, مباشرةً وبالتزامن. غيّر <b>المدرسة</b> أو <b>اللغة</b> في أي وقت." },
     "demo.chaperone": { en: "Chaperone app", ar: "تطبيق المرافِقة" },
     "demo.parent": { en: "Parent app", ar: "تطبيق ولي الأمر" },
     "demo.school": { en: "School Console", ar: "لوحة المدرسة" },
@@ -34,10 +34,15 @@
   }
 
   /* start / reset button reflects trip state */
+  let _btnKey = null;
   function updateBtn(st) {
+    const cat = !st.started ? "idle" : st.status === "completed" ? "completed" : "enroute";
+    const key = cat + "|" + WB.lang;
+    if (key === _btnKey) return;   // only touch the DOM on a real change, re-rendering every frame was swallowing clicks
+    _btnKey = key;
     const b = qs("#demo-start");
-    if (!st.started) { b.innerHTML = "▶ " + WB.t("demo.start"); b.className = "btn btn--green btn--sm pulse-btn"; }
-    else if (st.status === "completed") { b.innerHTML = "↻ " + WB.t("demo.restart"); b.className = "btn btn--primary btn--sm"; }
+    if (cat === "idle") { b.innerHTML = "▶ " + WB.t("demo.start"); b.className = "btn btn--green btn--sm pulse-btn"; }
+    else if (cat === "completed") { b.innerHTML = "↻ " + WB.t("demo.restart"); b.className = "btn btn--primary btn--sm"; }
     else { b.innerHTML = "↻ " + WB.t("demo.reset"); b.className = "btn btn--ghost btn--sm"; }
   }
   qs("#demo-start").addEventListener("click", () => {

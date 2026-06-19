@@ -1,5 +1,5 @@
 /* ============================================================================
-   WeinBus — Trip simulation. Position & ETA are derived from elapsed time, so
+   WeinBus, Trip simulation. Position & ETA are derived from elapsed time, so
    every iframe/tab agrees by reading the same clock + a shared start timestamp.
    Start/End/Reset broadcast over BroadcastChannel('weinbus').
    ========================================================================== */
