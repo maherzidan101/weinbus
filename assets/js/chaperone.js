@@ -236,6 +236,6 @@
   function clock() { const d = new Date(); qs("#clock").textContent = ((d.getHours() % 12) || 12) + ":" + String(d.getMinutes()).padStart(2, "0"); }
   WB.onLang(() => { renderTabs(); renderTrip(); if (currentView !== "trip") showView(currentView); });
 
-  function init() { renderTabs(); renderTrip(); clock(); setInterval(clock, 20000); }
+  function init() { renderTabs(); renderTrip(); clock(); setInterval(clock, 20000); WB.addBackButton(); }
   if (document.readyState !== "loading") init(); else document.addEventListener("DOMContentLoaded", init);
 })(window.WB);

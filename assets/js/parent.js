@@ -301,12 +301,6 @@
           <div class="hr"></div>
           <div class="row between"><span class="row gap2">${icon("building", { width: 18, height: 18 })}<b>${WB.t("p.schoolL")}</b></span><span data-brand-name class="muted small">-</span></div>
         </div>
-        <div class="card card--pad stack gap3">
-          <a class="row between row-item--btn" href="https://wa.me/962790000000" target="_blank" style="text-decoration:none">
-            <span class="row gap2" style="color:#25D366">${icon("message", { width: 18, height: 18 })}<b style="color:var(--ink)">${WB.t("p.whatsapp")}</b></span>${icon("chevronR", { width: 16, height: 16, class: "" })}</a>
-          <div class="hr" style="margin:2px 0"></div>
-          <div class="row gap2 small" style="color:var(--wb-green-deep)">${icon("shield", { width: 18, height: 18 })}<span>${WB.t("p.privacy")}</span></div>
-        </div>
         <button class="btn btn--ghost btn--block" style="color:var(--wb-coral-deep)">${WB.t("p.signout")}</button>
         <div class="center-text muted tiny" style="padding:8px">${WB.t("common.poweredBy")} · v1.0</div>
       </div>`;
@@ -369,6 +363,7 @@
   /* ---------- init ---------- */
   function init() {
     seedFeed(); renderTabs(); renderTrack(); clock(); setInterval(clock, 20000);
+    WB.addBackButton();
     if (!EMBED) { WB.trip.setLoop(true); WB.trip.ensureRunning(); }
   }
   if (document.readyState !== "loading") init(); else document.addEventListener("DOMContentLoaded", init);

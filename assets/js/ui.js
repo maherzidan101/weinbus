@@ -55,6 +55,7 @@ window.WB = window.WB || {};
     plus: '<path d="M12 5v14M5 12h14"/>',
     search: '<circle cx="11" cy="11" r="6.5"/><path d="M20 20l-3.6-3.6"/>',
     chevronR: '<path d="M9 5l7 7-7 7"/>',
+    chevronL: '<path d="M15 5l-7 7 7 7"/>',
     chevronD: '<path d="M5 9l7 7 7-7"/>',
     sparkles: '<path d="M12 3l1.7 4.8L18.5 9l-4.8 1.2L12 15l-1.7-4.8L5.5 9l4.8-1.2z"/><path d="M19 14l.8 2.3L22 17l-2.2.7L19 20l-.8-2.3L16 17l2.2-.7z"/>',
     building: '<path d="M4 21V6.5L12 3l8 3.5V21"/><path d="M9 21v-5h6v5"/><path d="M8 8.5h1.5M8 12h1.5M14.5 8.5H16M14.5 12H16"/><path d="M2.5 21h19"/>',
@@ -132,6 +133,18 @@ window.WB = window.WB || {};
       wrap.appendChild(p);
     }
     setTimeout(() => wrap.remove(), 2200);
+  };
+
+  /* ---- Floating "back to site" button (standalone apps only) ---------- */
+  WB.addBackButton = function () {
+    if (window.self !== window.top) return;            // hide inside the demo cockpit iframes
+    if (document.getElementById("wb-back")) return;
+    const a = WB.el(`<a id="wb-back" class="wb-back" href="index.html#apps">
+      <span class="wb-back__ic flipX">${WB.icon("chevronL", { width: 16, height: 16 })}</span>
+      <span class="wb-back__t">${WB.t("common.backToSite")}</span></a>`);
+    a.addEventListener("click", (e) => { if (document.referrer && history.length > 1) { e.preventDefault(); history.back(); } });
+    document.body.appendChild(a);
+    WB.onLang(() => { const t = a.querySelector(".wb-back__t"); if (t) t.textContent = WB.t("common.backToSite"); });
   };
 
   /* ---- Scroll reveal + count-up (auto-init) --------------------------- */

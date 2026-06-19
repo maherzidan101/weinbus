@@ -110,6 +110,7 @@ window.WB = window.WB || {};
     "common.demo":    { en: "Demo", ar: "تجريبي" },
     "common.poweredBy": { en: "Powered by WeinBus", ar: "مدعوم من وين الباص" },
     "common.language": { en: "Language", ar: "اللغة" },
-    "common.signout":  { en: "Sign out", ar: "تسجيل الخروج" }
+    "common.signout":  { en: "Sign out", ar: "تسجيل الخروج" },
+    "common.backToSite": { en: "Back to site", ar: "العودة إلى الموقع" }
   });
 })(window.WB);

@@ -189,3 +189,14 @@ html[dir="rtl"] .phone__notch { transform: translateX(50%); }
 
 /* Generic divider */
 .hr { height: 1px; background: var(--line-soft); border: 0; margin: var(--s4) 0; }
+
+/* ---- Floating "back to site" pill (shown in standalone apps) ---------- */
+.wb-back { position: fixed; inset-block-start: 12px; inset-inline-start: 12px; z-index: 200;
+  display: inline-flex; align-items: center; gap: 7px; padding: 9px 15px 9px 11px;
+  background: var(--surface); color: var(--ink); border-radius: var(--r-pill);
+  box-shadow: var(--sh-lg); border: 1px solid var(--line); text-decoration: none;
+  font-family: var(--font-display); font-weight: 700; font-size: var(--fs-sm);
+  transition: transform var(--t-fast) var(--ease-bounce), box-shadow var(--t-med); }
+.wb-back:hover { transform: translateY(-1px); box-shadow: var(--sh-xl); }
+.wb-back__ic { display: inline-flex; color: var(--brand-primary-deep); }
+@media (min-width: 600px) { .wb-back { inset-block-start: 18px; inset-inline-start: 18px; } }
