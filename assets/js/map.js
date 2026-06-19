@@ -142,21 +142,13 @@ window.WB = window.WB || {};
     // ---- bus marker ----
     const busG = svg.querySelector("#wb-bus");
     busG.innerHTML = `
-      <circle class="wb-accuracy" r="26" style="fill:var(--brand-secondary)" opacity=".16"/>
-      <g class="wb-heading"><path d="M0 -30 L 9 -16 L -9 -16 Z" style="fill:var(--brand-secondary-deep)" opacity=".9"/></g>
-      <g class="wb-busbadge" filter="url(#mshadow)">
-        <circle r="17" style="fill:var(--brand-secondary-deep)"/><circle r="17" fill="#fff" opacity=".0"/>
-        <g transform="translate(-11,-11)" style="color:#fff">${WB.icon("bus", { width: 22, height: 22 })}</g>
-      </g>`;
-    const headingG = busG.querySelector(".wb-heading");
+      <circle class="wb-accuracy" r="21" cy="-22" style="fill:var(--brand-secondary)" opacity=".18"/>
+      <image class="wb-busmascot" href="assets/img/weinbus-icon.png" xlink:href="assets/img/weinbus-icon.png" x="-19" y="-52" width="38" height="52" style="filter:drop-shadow(0 4px 5px rgba(27,42,68,.32))"/>`;
 
     function place(frac) {
       const len = Math.max(0, Math.min(total, frac * total));
       const p = routeEl.getPointAtLength(len);
-      const a = routeEl.getPointAtLength(Math.min(total, len + 2));
-      const ang = Math.atan2(a.y - p.y, a.x - p.x) * 180 / Math.PI;
       busG.setAttribute("transform", `translate(${p.x},${p.y})`);
-      headingG.setAttribute("transform", `rotate(${ang + 90})`);
     }
     function setBus(seg, segT) {
       const a = stopAt[seg], b = stopAt[Math.min(seg + 1, stopAt.length - 1)];

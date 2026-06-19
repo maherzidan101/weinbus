@@ -54,9 +54,7 @@ window.WB = window.WB || {};
     size = size || 40;
     const th = WB.themes[id] || WB.themes.weinbus;
     if (th.glyph === "bus") {
-      const r = Math.round(size * 0.26), h = Math.round(size * 0.82);
-      return `<span style="display:inline-grid;place-items:center;width:${size}px;height:${size}px;background:#fff;border-radius:${r}px;box-shadow:0 1px 4px rgba(32,48,74,.14);flex:none;overflow:hidden">
-        <img src="assets/img/weinbus-icon.png" alt="WeinBus" style="height:${h}px;width:auto;display:block"></span>`;
+      return `<img src="assets/img/weinbus-icon.png" alt="WeinBus" style="height:${size}px;width:auto;display:block;flex:none;filter:drop-shadow(0 1px 2px rgba(32,48,74,.22))">`;
     }
     return `<svg width="${size}" height="${size}" viewBox="0 0 48 48" aria-hidden="true">
       <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#g_${id})"/>

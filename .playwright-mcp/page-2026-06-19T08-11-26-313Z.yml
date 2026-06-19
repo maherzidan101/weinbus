@@ -1,0 +1,131 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: 11:11
+      - generic [ref=e5]:
+        - img [ref=e6]
+        - img [ref=e11]
+        - img [ref=e13]
+    - generic [ref=e17]:
+      - banner [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - img "WeinBus" [ref=e23]
+            - generic [ref=e24]: وين الباص
+          - generic [ref=e25]:
+            - button [ref=e26] [cursor=pointer]:
+              - img [ref=e27]
+            - generic [ref=e30]: RH
+        - generic [ref=e31]:
+          - generic [ref=e32]: صباح الخير, رنا 👋
+          - generic [ref=e33]: صباحي · المسار A · خلدا ← المنهل
+        - generic [ref=e34]:
+          - button "LH لانا" [ref=e35] [cursor=pointer]:
+            - generic [ref=e36]: LH
+            - generic [ref=e37]: لانا
+          - button "YH يوسف" [ref=e38] [cursor=pointer]:
+            - generic [ref=e39]: YH
+            - generic [ref=e40]: يوسف
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - img [ref=e44]:
+            - img [ref=e84]
+          - generic [ref=e90]:
+            - generic [ref=e93]: مباشر
+            - generic [ref=e94]:
+              - img [ref=e95]
+              - generic [ref=e99]: الباص 7
+          - generic [ref=e103]: الآنسة هدى · المرافِقة
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - generic [ref=e106]:
+              - generic [ref=e107]:
+                - generic [ref=e108]: LH
+                - generic [ref=e109]: لانا
+                - generic [ref=e111]:
+                  - img [ref=e112]
+                  - text: بالانتظار
+              - generic [ref=e115]: حتى محطتكم
+              - generic [ref=e116]:
+                - generic [ref=e117]: "5"
+                - generic [ref=e118]: دقيقة
+            - generic [ref=e119]:
+              - generic [ref=e120]: "2"
+              - generic [ref=e121]: على الباص
+          - generic [ref=e123]:
+            - generic [ref=e124]: مرآب خلدا
+            - generic [ref=e125]: "التالي: شارع الجامعة"
+            - generic [ref=e126]: مدرسة المنهل
+        - generic [ref=e127]:
+          - generic [ref=e128]: المسار والمحطات
+          - generic [ref=e129]:
+            - generic [ref=e135]:
+              - generic [ref=e136]: مرآب خلدا
+              - generic [ref=e137]: 6:55 ص
+            - generic [ref=e142]:
+              - generic [ref=e143]:
+                - generic [ref=e144]: تلاع العلي
+                - generic [ref=e145]: 7:06 ص
+              - generic [ref=e146]: عمر، كريم
+            - generic [ref=e151]:
+              - generic [ref=e152]:
+                - generic [ref=e153]: شارع الجامعة
+                - generic [ref=e154]: 7:13 ص
+              - generic [ref=e155]: سلمى، لانا، يوسف
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - generic [ref=e162]: الجاردنز · وصفي التل
+                - generic [ref=e163]: 7:22 ص
+              - generic [ref=e164]: تيا، آدم، جنى
+            - generic [ref=e169]:
+              - generic [ref=e170]: مدرسة المنهل
+              - generic [ref=e171]: 7:35 ص
+        - generic [ref=e172]:
+          - generic [ref=e173]: طاقم اليوم
+          - generic [ref=e174]:
+            - generic [ref=e177]:
+              - text: هدى الرشيد
+              - generic [ref=e178]: المرافِقة · الباص 7
+            - generic [ref=e179]:
+              - link "اتصال" [ref=e180] [cursor=pointer]:
+                - /url: tel:+962784332071
+                - img [ref=e181]
+                - generic [ref=e183]: اتصال
+              - button [ref=e184] [cursor=pointer]:
+                - img [ref=e185]
+          - generic [ref=e188]:
+            - generic [ref=e189]:
+              - generic [ref=e190]: AK
+              - generic [ref=e191]:
+                - text: أحمد الخطّاب
+                - generic [ref=e192]: السائق · الباص 7
+            - generic [ref=e193]:
+              - link "اتصال" [ref=e194] [cursor=pointer]:
+                - /url: tel:+962796128840
+                - img [ref=e195]
+                - generic [ref=e197]: اتصال
+              - button [ref=e198] [cursor=pointer]:
+                - img [ref=e199]
+    - navigation [ref=e202]:
+      - generic [ref=e203]:
+        - img [ref=e204]
+        - generic [ref=e207]: تتبّع
+      - generic [ref=e208]:
+        - img [ref=e209]
+        - generic [ref=e212]: التنبيهات
+        - generic [ref=e213]: "1"
+      - generic [ref=e214]:
+        - img [ref=e215]
+        - generic [ref=e220]: الأبناء
+      - generic [ref=e221]:
+        - img [ref=e222]
+        - generic [ref=e225]: المزيد
+  - status [ref=e226]:
+    - generic [ref=e227]: 📍
+    - generic [ref=e228]:
+      - generic [ref=e229]: الباص يقترب من محطتكم
+      - generic [ref=e230]: الباص 7 على بُعد 5 دقائق من شارع الجامعة. الرجاء التوجّه للمحطة. 🏃
+  - link "العودة إلى الموقع" [ref=e231] [cursor=pointer]:
+    - /url: index.html#apps
+    - img [ref=e233]
+    - generic [ref=e235]: العودة إلى الموقع
