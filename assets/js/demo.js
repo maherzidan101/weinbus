@@ -56,6 +56,7 @@
   WB.onLang(() => { renderBrands(); updateBtn(WB.trip.state()); });
 
   function init() {
+    WB.ensureSchoolBrand();
     WB.trip.reset();          // start the demo clean; idle until the presenter taps Start
     renderBrands(); updateUrl(); updateBtn(WB.trip.state());
   }

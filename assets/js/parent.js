@@ -149,7 +149,7 @@
               <div class="tl-row" data-i="${i}">
                 <div class="tl-node"><div class="tl-dot"></div><div class="tl-line"></div></div>
                 <div class="tl-body"><div class="row between"><span class="tl-name">${pick(s.name)}</span><span class="muted small num">${fmtTime(s.time)}</span></div>
-                ${s.kids.length ? `<div class="muted tiny">${s.kids.map((k) => firstName(D.student(k))).join("، ")}</div>` : ""}</div>
+                ${(() => { const mine = s.kids.filter((k) => KIDS.some((mk) => mk.id === k)); return mine.length ? `<div class="tiny" style="color:var(--brand-primary-deep);font-weight:800;margin-top:2px">${mine.map((k) => firstName(D.student(k))).join("، ")}</div>` : ""; })()}</div>
               </div>`).join("")}
           </div>
         </div>
@@ -189,7 +189,7 @@
     const status = kidStatus(kid, st);
     R.kidBadge.innerHTML = statusBadge(status);
     R.kidName.textContent = firstName(kid);
-    R.ob.textContent = st.onboard;
+    R.ob.textContent = KIDS.filter((k) => st.onboardIds && st.onboardIds.has(k.id)).length + "/" + KIDS.length;
     R.bar.style.width = Math.round((st.started ? st.progress : 0) * 100) + "%";
     R.next.textContent = WB.t("p.next") + ": " + pick(D.routeA.stops[st.nextStopIndex].name);
 
@@ -363,6 +363,7 @@
 
   /* ---------- init ---------- */
   function init() {
+    WB.ensureSchoolBrand();
     seedFeed(); renderTabs(); renderTrack(); clock(); setInterval(clock, 20000);
     WB.addBackButton();
     if (!EMBED) { WB.trip.setLoop(true); WB.trip.ensureRunning(); }

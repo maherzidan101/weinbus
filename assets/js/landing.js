@@ -172,7 +172,7 @@
 
   WB.onLang(render);
   function init() {
-    WB.setBrand("weinbus");
+    WB.applyThemeVars("weinbus"); // marketing site is always WeinBus-branded (display only, doesn't change the apps' school)
     WB.lang = "en"; // the pitch landing always opens in English (apps keep their own saved language)
     document.documentElement.setAttribute("lang", "en");
     document.documentElement.setAttribute("dir", "ltr");

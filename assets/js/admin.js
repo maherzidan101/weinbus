@@ -307,6 +307,7 @@
   function markSideLang() { qsa("#side-lang button").forEach((b) => b.classList.toggle("active", b.getAttribute("data-l") === WB.lang)); }
 
   function init() {
+    WB.ensureSchoolBrand();
     seedActivity(); renderNav(); renderDashboard(); refreshUser(); markSideLang(); WB.addBackButton();
     qsa("#side-lang button").forEach((b) => b.addEventListener("click", () => WB.setLang(b.getAttribute("data-l"))));
     if (!EMBED) { WB.trip.setLoop(true); WB.trip.ensureRunning(); }

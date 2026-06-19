@@ -105,6 +105,11 @@ window.WB = window.WB || {};
   /* Apply theme vars immediately (before paint) to avoid a flash */
   applyVars(WB.brand);
 
+  // Landing shows the WeinBus theme for DISPLAY only (no persist / no broadcast).
+  WB.applyThemeVars = function (id) { applyVars(id); };
+  // The apps are white-labelled per school and must never show the bare WeinBus brand.
+  WB.ensureSchoolBrand = function (fallback) { if (WB.brand === "weinbus") WB.setBrand(fallback || "manhal"); };
+
   function init() {
     WB.applyBrandDom();
     document.querySelectorAll("[data-brand-opt]").forEach((b) =>
